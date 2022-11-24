@@ -1,7 +1,7 @@
-export default function Index() {
+export default function Wishlist() {
 
     return (
-        <section className="about-section text-center" id="about">
+        <section className="about-section text-center" id="wishlist">
             <body>
             <div id="preloader">
                 <div className="preloader">

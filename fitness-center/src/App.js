@@ -13,24 +13,64 @@ import Portfolio from "./Components/Portfolio/portfolio.js";
 import Wishlist from "./Components/Wishlist/wishlist.js";
 import Header from "./Components/Header/header.js";
 import Footer from "./Components/Footer/footer.js";
-function App() {
-  return (
-    <div className="App">
-        <Header></Header>
-        <Index></Index>
-        {/*<Shop></Shop>*/}
-        {/*<Team></Team>*/}
-        {/*<About></About>*/}
-        {/*<Blog></Blog>*/}
-      {/*<Cart></Cart>*/}
-      {/*  <Checkout></Checkout>*/}
-{/*<Classes></Classes>*/}
-{/*<Contact></Contact>*/}
-{/*      <Price></Price>*/}
-{/*      <Portfolio></Portfolio>*/}
-{/*        <Wishlist></Wishlist>*/}
-        <Footer></Footer>
-    </div>
+import Error404 from "./Components/Error/error.js";
+
+import React, { useContext } from 'react'
+import { BrowserRouter as Router, Switch, Route,__RouterContext } from 'react-router-dom'
+import { animated, useTransition } from 'react-spring'
+function useRouter() {
+    return useContext(__RouterContext)
+}
+const Main = () => {
+    const { location } = useRouter()
+    const transitions = useTransition(location, location => location.key, {
+        from: {
+            opacity: 0,
+            position: 'absolute',
+            width: '100%',
+            transform: `translate3d(100%, 0, 0)`
+        },
+        enter: { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+        leave: {
+            opacity: 0,
+            transform: `translate3d(-50%, 0, 0)`
+        }
+    })
+
+    return transitions.map(({ item, props: transition, key }) => (
+        <animated.div key={key} style={transition}>
+            <Switch location={item}>
+                <Route exact path="/" component={Index} />
+                <Route exact path="/contact" component={Contact} />
+                <Route exact path="/shop" component={Shop} />
+            </Switch>
+        </animated.div>
+    )
+/*//       <BrowserRouter>*/
+/*//           <Header></Header>*/
+//           {/*<Routes>*/}
+//           {/*    <Route path="/" exact element={<Index />} />*/}
+//           {/*    <Route path="/about" exact element={<About />} />*/}
+//           {/*    <Route path="/pages/team" exact element={<Team />} />*/}
+//           {/*    <Route path="/shop" exact element={<Shop />} />*/}
+//           {/*    <Route path="/portfolio" exact element={<Portfolio />} />*/}
+//           {/*    <Route path="/blog" exact element={<Blog />} />*/}
+//           {/*    <Route path="*" exact element={<Error404 />} />*/}
+//           {/*</Routes>*/}
+//         {/*<Index></Index>*/}
+//         {/*<Shop></Shop>*/}
+//         {/*<Team></Team>*/}
+//         {/*<About></About>*/}
+//         {/*<Blog></Blog>*/}
+//       {/*<Cart></Cart>*/}
+//       {/*  <Checkout></Checkout>*/}
+// {/*<Classes></Classes>*/}
+// {/*<Contact></Contact>*/}
+// {/*      <Price></Price>*/}
+// {/*      <Portfolio></Portfolio>*/}
+// {/*        <Wishlist></Wishlist>*/}
+// {/*        <Footer></Footer>*/}
+/*//       </BrowserRouter>*/
   );
 }
 

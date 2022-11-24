@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 export default function About() {
 
     return (
@@ -68,43 +70,26 @@ export default function About() {
                                     <div className="main-menu">
                                         <nav id="mobile-menu">
                                             <ul>
-                                                <li><a href="index.html">Home </a></li>
-                                                <li><a href="about.html" className="active">About </a></li>
-                                                <li><a href="about.html">Pages<i
-                                                    className="fal fa-plus dropdown-icon"></i></a>
+                                                <li><Link to="/">Home </Link></li>
+                                                <li><Link to="/about">About </Link></li>
+                                                <li><Link to="/about">Pages<i className="fal fa-plus dropdown-icon"></i></Link>
                                                     <ul className="sub-menu">
-                                                        <li><a href="classes.html">Classes</a></li>
-                                                        <li><a href="classes-details.html">Classes Details</a></li>
-                                                        <li><a href="team.html">Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                        <li><a href="price.html">Pricing Plan</a></li>
-                                                        <li><a href="cart.html">Cart</a></li>
-                                                        <li><a href="checkout.html">Checkout</a></li>
-                                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                                        <li><Link to="/classes">Classes</Link></li>
+                                                        <li><Link to="/team">Team</Link></li>
+                                                        <li><Link to="/price">Pricing Plan</Link></li>
+                                                        <li><Link to="/cart">Cart</Link></li>
+                                                        <li><Link to="/checkout">Checkout</Link></li>
+                                                        <li><Link to="/wishlist">Wishlist</Link></li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="shop.html">Shop <i
-                                                    className="fal fa-plus dropdown-icon"></i></a>
-                                                    <ul className="sub-menu">
-                                                        <li><a href="shop.html">Shop</a></li>
-                                                        <li><a href="shop-details.html">Shop Details</a></li>
-                                                    </ul>
+                                                <li><Link to="/shop">Shop </Link>
                                                 </li>
-                                                <li><a href="protfolio.html">Portfolio <i
-                                                    className="fal fa-plus dropdown-icon"></i></a>
-                                                    <ul className="sub-menu">
-                                                        <li><a href="protfolio.html">Portfolio </a></li>
-                                                        <li><a href="protfolio-details.html">Portfolio Details</a></li>
-                                                    </ul>
+                                                <li><Link to="/protfolio">Portfolio</Link>
+
                                                 </li>
-                                                <li><a href="blog.html">Blog <i
-                                                    className="fal fa-plus dropdown-icon"></i></a>
-                                                    <ul className="sub-menu">
-                                                        <li><a href="blog.html">Blog</a></li>
-                                                        <li><a href="blog-details.html">Blog Details</a></li>
-                                                    </ul>
+                                                <li><Link to="/blog">Blog</Link>
                                                 </li>
-                                                <li><a href="contact.html">Contact </a></li>
+                                                <li><Link to="/contact">Contact </Link></li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -126,6 +111,68 @@ export default function About() {
                     </div>
                 </div>
             </header>
+            <div className="sidebar__area">
+                <div className="sidebar__wrapper">
+                    <div className="sidebar__close">
+                        <button className="sidebar__close-btn" id="sidebar__close-btn">
+                            <i className="fal fa-times"/>
+                        </button>
+                    </div>
+                    <div className="sidebar__content">
+                        <div className="sidebar__logo mb-40">
+                            <a href="index.html">
+                                <img src="assets/img/logo/logo.png" alt="logo"/>
+                            </a>
+                        </div>
+                        <div className="sidebar__search mb-25">
+                            <form action="#">
+                                <input type="text" placeholder="What are you searching for?"/>
+                                <button type="submit"><i className="far fa-search"/></button>
+                            </form>
+                        </div>
+                        <div className="mobile-menu fix"/>
+                        <div className="sidebar__contact mt-30 mb-20">
+                            <h4>Contact Info</h4>
+                            <ul>
+                                <li className="d-flex align-items-center">
+                                    <div className="sidebar__contact-icon mr-15">
+                                        <i className="fal fa-map-marker-alt"/>
+                                    </div>
+                                    <div className="sidebar__contact-text">
+                                        <a target="_blank" href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">12/A, Mirnada City Tower, NYC</a>
+                                    </div>
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <div className="sidebar__contact-icon mr-15">
+                                        <i className="far fa-phone"/>
+                                    </div>
+                                    <div className="sidebar__contact-text">
+                                        <a href="tel:+012-345-6789">088889797697</a>
+                                    </div>
+                                </li>
+                                <li className="d-flex align-items-center">
+                                    <div className="sidebar__contact-icon mr-15">
+                                        <i className="fal fa-envelope"/>
+                                    </div>
+                                    <div className="sidebar__contact-text">
+                                        <a href="mailto:support@gmail.com">support@mail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="sidebar__social">
+                            <ul>
+                                <li><a href="#"><i className="fab fa-facebook-f"/></a></li>
+                                <li><a href="#"><i className="fab fa-twitter"/></a></li>
+                                <li><a href="#"><i className="fab fa-youtube"/></a></li>
+                                <li><a href="#"><i className="fab fa-linkedin"/></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="body-overlay"/>
         </section>
     )
 }

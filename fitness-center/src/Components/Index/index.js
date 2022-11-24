@@ -2,191 +2,7 @@
 export default function Index() {
 
     return (
-    <section className="about-section text-center" id="about">
-
-    {/*<div id="preloader">*/}
-    {/*    <div className="preloader">*/}
-    {/*        <span></span>*/}
-    {/*        <span></span>*/}
-    {/*    </div>*/}
-    {/*</div>*/}
-    {/*<div className="progress-wrap">*/}
-    {/*    <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">*/}
-    {/*        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>*/}
-    {/*    </svg>*/}
-    {/*</div>*/}
-    {/*<header className="top-nav">*/}
-    {/*    <div className="top-address d-none d-lg-block">*/}
-    {/*        <div className="container">*/}
-    {/*            <div className="row align-items-center">*/}
-    {/*                <div className="col-xxl-7 col-xl-5 col-lg-4 col-md-3">*/}
-    {/*                    <div className="top-logo">*/}
-    {/*                        <a href="#"><img src="assets/img/logo/logo.png" alt=""/></a>*/}
-    {/*                    </div>*/}
-    {/*                </div>*/}
-    {/*                <div className="col-xxl-5 col-xl-7 col-lg-8 col-md-9">*/}
-    {/*                    <div className="topbar-info">*/}
-    {/*                        <div className="contact-item">*/}
-    {/*                            <i className="flaticon-pin"/>*/}
-    {/*                            <div className="content">*/}
-    {/*                                <p>Our Location</p>*/}
-    {/*                                <a href="https://www.google.com/maps/search/25%2F7+Barden,+London/@51.5287718,-0.2416803,11z/data=!3m1!4b1"*/}
-    {/*                                   target="blank">25/7 Barden, London</a>*/}
-    {/*                            </div>*/}
-    {/*                        </div>*/}
-    {/*                        <div className="contact-item">*/}
-    {/*                            <i className="flaticon-email"/>*/}
-    {/*                            <div className="content">*/}
-    {/*                                <p>Online Support</p>*/}
-    {/*                                <a href="mailto:info@fetoxe2.com">info@fetoxe2.com</a>*/}
-    {/*                            </div>*/}
-    {/*                        </div>*/}
-    {/*                        <div className="contact-item">*/}
-    {/*                            <i className="flaticon-contact"/>*/}
-    {/*                            <div className="content">*/}
-    {/*                                <p>Free Contact</p>*/}
-    {/*                                <a href="tel:02-325-562-3652">02-325-562-3652</a>*/}
-    {/*                            </div>*/}
-    {/*                        </div>*/}
-    {/*                    </div>*/}
-    {/*                </div>*/}
-    {/*            </div>*/}
-    {/*        </div>*/}
-    {/*    </div>*/}
-    {/*    <div className="menu-area" id="header-sticky">*/}
-    {/*        <div className="container">*/}
-    {/*            <div className="row align-items-center justify-content-center">*/}
-    {/*                <div className="col-xxl-12 col-xl-12 col-lg-12">*/}
-    {/*                    <div className="topcontact-btn f-right d-none d-lg-block">*/}
-    {/*                        <div className="contact-btn">*/}
-    {/*                            <a href="contact.html" className="top-btn">Contact Us <i className="fal fa-chevron-double-right"/></a>*/}
-    {/*                        </div>*/}
-    {/*                    </div>*/}
-    {/*                    <div className="menu-content">*/}
-    {/*                        <div className="top-logo d-lg-none">*/}
-    {/*                            <a href="index.html"><img src="assets/img/logo/logo.png" alt=""/></a>*/}
-    {/*                        </div>*/}
-    {/*                        <div className="main-menu">*/}
-    {/*                            <nav id="mobile-menu">*/}
-    {/*                                <ul>*/}
-    {/*                                    <li><a href="index.html" className="active">Home </a></li>*/}
-    {/*                                    <li><a href="about.html">About </a></li>*/}
-    {/*                                    <li><a href="about.html">Pages <i className="fal fa-plus dropdown-icon"/></a>*/}
-    {/*                                        <ul className="sub-menu">*/}
-    {/*                                            <li><a href="classes.html">Classes</a></li>*/}
-    {/*                                            <li><a href="classes-details.html">Classes Details</a></li>*/}
-    {/*                                            <li><a href="team.html">Team</a></li>*/}
-    {/*                                            <li><a href="team-details.html">Team Details</a></li>*/}
-    {/*                                            <li><a href="price.html">Pricing Plan</a></li>*/}
-    {/*                                            <li><a href="cart.html">Cart</a></li>*/}
-    {/*                                            <li><a href="checkout.html">Checkout</a></li>*/}
-    {/*                                            <li><a href="wishlist.html">Wishlist</a></li>*/}
-    {/*                                        </ul>*/}
-    {/*                                    </li>*/}
-    {/*                                    <li><a href="shop.html">Shop <i className="fal fa-plus dropdown-icon"/></a>*/}
-    {/*                                        <ul className="sub-menu">*/}
-    {/*                                            <li><a href="shop.html">Shop </a></li>*/}
-    {/*                                            <li><a href="shop-details.html">Shop Details</a></li>*/}
-    {/*                                        </ul>*/}
-    {/*                                    </li>*/}
-    {/*                                    <li><a href="protfolio.html">Portfolio <i className="fal fa-plus dropdown-icon"/></a>*/}
-    {/*                                        <ul className="sub-menu">*/}
-    {/*                                            <li><a href="protfolio.html">Portfolio </a></li>*/}
-    {/*                                            <li><a href="protfolio-details.html">Portfolio Details</a></li>*/}
-    {/*                                        </ul>*/}
-    {/*                                    </li>*/}
-    {/*                                    <li><a href="blog.html">Blog <i className="fal fa-plus dropdown-icon"/></a>*/}
-    {/*                                        <ul className="sub-menu">*/}
-    {/*                                            <li><a href="blog.html">Blog </a></li>*/}
-    {/*                                            <li><a href="blog-details.html">Blog Details</a></li>*/}
-    {/*                                        </ul>*/}
-    {/*                                    </li>*/}
-    {/*                                    <li><a href="contact.html">Contact </a></li>*/}
-    {/*                                </ul>*/}
-    {/*                            </nav>*/}
-    {/*                        </div>*/}
-    {/*                        <div className="side-menu-icon d-lg-none text-end">*/}
-    {/*                            <a href="javascript:void(0)" className="info-toggle-btn f-right sidebar-toggle-btn">*/}
-    {/*                                <i className="fal fa-bars"/>*/}
-    {/*                            </a>*/}
-    {/*                        </div>*/}
-    {/*                        <div className="header-action-btn f-right d-none d-lg-block">*/}
-    {/*                            <a href="javascript:void(0)" data-bs-toggle="modal" className="search" data-bs-target="#search-modal">*/}
-    {/*                                <i className="far fa-search"/>*/}
-    {/*                            </a>*/}
-    {/*                            <a href="cart.html"><i className="fas fa-shopping-basket"/>*/}
-    {/*                                <span>0</span>*/}
-    {/*                            </a>*/}
-    {/*                        </div>*/}
-    {/*                    </div>*/}
-    {/*                </div>*/}
-    {/*            </div>*/}
-    {/*        </div>*/}
-    {/*    </div>*/}
-    {/*</header>*/}
-    <div className="sidebar__area">
-        <div className="sidebar__wrapper">
-            <div className="sidebar__close">
-                <button className="sidebar__close-btn" id="sidebar__close-btn">
-                    <i className="fal fa-times"/>
-                </button>
-            </div>
-            <div className="sidebar__content">
-                <div className="sidebar__logo mb-40">
-                    <a href="index.html">
-                        <img src="assets/img/logo/logo.png" alt="logo"/>
-                    </a>
-                </div>
-                <div className="sidebar__search mb-25">
-                    <form action="#">
-                        <input type="text" placeholder="What are you searching for?"/>
-                            <button type="submit"><i className="far fa-search"/></button>
-                    </form>
-                </div>
-                <div className="mobile-menu fix"/>
-                <div className="sidebar__contact mt-30 mb-20">
-                    <h4>Contact Info</h4>
-                    <ul>
-                        <li className="d-flex align-items-center">
-                            <div className="sidebar__contact-icon mr-15">
-                                <i className="fal fa-map-marker-alt"/>
-                            </div>
-                            <div className="sidebar__contact-text">
-                                <a target="_blank" href="https://www.google.com/maps/place/Dhaka/@23.7806207,90.3492859,12z/data=!3m1!4b1!4m5!3m4!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.8104753!4d90.4119873">12/A, Mirnada City Tower, NYC</a>
-                            </div>
-                        </li>
-                        <li className="d-flex align-items-center">
-                            <div className="sidebar__contact-icon mr-15">
-                                <i className="far fa-phone"/>
-                            </div>
-                            <div className="sidebar__contact-text">
-                                <a href="tel:+012-345-6789">088889797697</a>
-                            </div>
-                        </li>
-                        <li className="d-flex align-items-center">
-                            <div className="sidebar__contact-icon mr-15">
-                                <i className="fal fa-envelope"/>
-                            </div>
-                            <div className="sidebar__contact-text">
-                                <a href="mailto:support@gmail.com">support@mail.com</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div className="sidebar__social">
-                    <ul>
-                        <li><a href="#"><i className="fab fa-facebook-f"/></a></li>
-                        <li><a href="#"><i className="fab fa-twitter"/></a></li>
-                        <li><a href="#"><i className="fab fa-youtube"/></a></li>
-                        <li><a href="#"><i className="fab fa-linkedin"/></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div className="body-overlay"/>
-
+    <section className="about-section text-center" id="/">
 
     <main>
 
@@ -195,7 +11,7 @@ export default function Index() {
                 <div className="swiper-wrapper p-relative">
                     <div className="hero-pagination"/>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/hero-1.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
@@ -204,7 +20,7 @@ export default function Index() {
                                         <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">be storong</h2>
                                         <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">Hardest part is walking out in the front door</p>
                                         <div className="play-option" data-animation="fadeInUp" data-delay=".8s">
-                                            <a href="about.html" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/> </a>
+                                            <a href="about.js" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/> </a>
                                             <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
                                                 <i className="fas fa-play"/>
                                             </a>
@@ -221,7 +37,7 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/hero-2.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
@@ -247,7 +63,7 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/hero-3.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
