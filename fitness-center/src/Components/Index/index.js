@@ -1,17 +1,20 @@
+import {Link} from "react-router-dom";
 
 export default function Index() {
 
     return (
+
     <section className="about-section text-center" id="/">
 
     <main>
+
 
         <div className="hero-area fix">
             <div className="hero-slider slider__active swiper-container swiper-container-fade">
                 <div className="swiper-wrapper p-relative">
                     <div className="hero-pagination"/>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
@@ -37,7 +40,7 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
@@ -63,7 +66,7 @@ export default function Index() {
                         </div>
                     </div>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/mainbg1.jpg"/>
+                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
@@ -91,7 +94,6 @@ export default function Index() {
                 </div>
             </div>
         </div>
-
         <div className="tpfeatures-lists">
             <div className="container">
                 <div className="row g-0">
@@ -872,7 +874,7 @@ export default function Index() {
                                             </ul>
                                         </div>
                                         <div className="price-btn text-center pb-30">
-                                            <a href="price.html" className="tp-btn-round">join today <i className="fal fa-chevron-double-right"></i></a>
+                                            <a href="/" className="tp-btn-round">join today <i className="fal fa-chevron-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div>

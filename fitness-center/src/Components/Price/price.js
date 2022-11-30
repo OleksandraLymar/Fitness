@@ -3,12 +3,12 @@ export default function Price() {
     return (
         <section className="about-section text-center" id="price">
             <body>
-            <div id="preloader">
-                <div className="preloader">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
+            {/*<div id="preloader">*/}
+            {/*    <div className="preloader">*/}
+            {/*        <span></span>*/}
+            {/*        <span></span>*/}
+            {/*    </div>*/}
+            {/*</div>*/}
             <div className="progress-wrap">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                     <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -195,7 +195,7 @@ export default function Price() {
 
 
             <main>
-                <div className="page__title align-items-center" data-background="assets/img/bg/breadcam-bg.jpg">
+                <div className="page__title align-items-center" data-background="assets/img/bg/slider7.jpg">
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-12">

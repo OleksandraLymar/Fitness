@@ -65,7 +65,7 @@ export default function About() {
                                 </div>
                                 <div className="menu-content">
                                     <div className="top-logo d-lg-none">
-                                        <a href="index.html"><img src="assets/img/logo/logo.png" alt=""/></a>
+                                        <a href="index.js"><img src="assets/img/logo/logo.png" alt=""/></a>
                                     </div>
                                     <div className="main-menu">
                                         <nav id="mobile-menu">
