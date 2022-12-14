@@ -9,13 +9,13 @@ import Blog from "./Components/Blog/blog.js";
 import Cart from "./Components/Cart/cart.js";
 import Checkout from "./Components/Checkout/checkout.js";
 import Classes from "./Components/Classes/classes.js";
- import Contact from "./Components/Contact/contact.js";
+ import Contact from "./Components/Contact/js/contact.js";
 
 import Price from "./Components/Price/price.js";
 import Portfolio from "./Components/Portfolio/portfolio.js";
 import Wishlist from "./Components/Wishlist/wishlist.js";
 import Header from "./Components/Header/header.js";
-// import Footer from "./Components/Footer/footer.js";
+import Footer from "./Components/Footer/footer.js";
 // import Error404 from "./Components/Error/error.js
 
 
@@ -38,10 +38,16 @@ function App() {
     return  (
         <BrowserRouter>
             <Header></Header>
-              <Routes>
-                   <Route path="/" element={<Index></Index>} />
-                   <Route path="/price" element={<Price></Price>} />
-              </Routes>
+
+            <Shop/>
+              {/*<Routes>*/}
+              {/*     <Route path="/" element={<Index></Index>} />*/}
+              {/*     <Route path="/about" element={<About></About>} />*/}
+              {/*     <Route path="/shop" element={<Shop></Shop>} />*/}
+              {/*     <Route path="/portfolio" element={<Portfolio></Portfolio>} />*/}
+              {/*     <Route path="/price" element={<Price></Price>} />*/}
+              {/*</Routes>*/}
+            <Footer></Footer>
     </BrowserRouter>
   );
 }

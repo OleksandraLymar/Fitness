@@ -30,22 +30,22 @@ export default function About() {
                                         <i className="flaticon-pin"></i>
                                         <div className="content">
                                             <p>Our Location</p>
-                                            <a href="https://www.google.com/maps/search/25%2F7+Barden,+London/@51.5287718,-0.2416803,11z/data=!3m1!4b1"
-                                               target="blank">25/7 Barden, London</a>
+                                            <a href="https://www.google.com/maps/place/Fitness+First+Berlin/@52.4494081,13.2768607,14z/data=!3m1!5s0x47a85a866283b6b5:0xa25540742ad40718!4m10!1m2!2m1!1sFitness+First+Berlin+-+Steglitz!3m6!1s0x47a85a868fdf4497:0xf7fc7190a6aaef59!8m2!3d52.457654!4d13.321046!15sCh9GaXRuZXNzIEZpcnN0IEJlcmxpbiAtIFN0ZWdsaXR6IgOIAQFaHyIdZml0bmVzcyBmaXJzdCBiZXJsaW4gc3RlZ2xpdHqSAQ5maXRuZXNzX2NlbnRlcuABAA!16s%2Fg%2F1tffyjlt"
+                                               target="blank">Berlin</a>
                                         </div>
                                     </div>
                                     <div className="contact-item">
                                         <i className="flaticon-email"></i>
                                         <div className="content">
                                             <p>Online Support</p>
-                                            <a href="mailto:info@fetoxe2.com">info@fetoxe2.com</a>
+                                            <a href="mailto: corporate@fitnessfirst.de"> corporate@fitnessfirst.de</a>
                                         </div>
                                     </div>
                                     <div className="contact-item">
                                         <i className="flaticon-contact"></i>
                                         <div className="content">
                                             <p>Free Contact</p>
-                                            <a href="tel:02-325-562-3652">02-325-562-3652</a>
+                                            <a href="tel:02-325-562-3652">+49 3-0-44-67-37-0</a>
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,28 @@
 import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import "./styleindex.css";
 
 export default function Index() {
+    const [bmi, setBmi] = useState();
+    const [info, setInfo] = useState();
+    const [height, setHeight] = useState();
+    const [weight, setWeight] = useState();
+    const handleBmi = () => {
+        let val = (
+            [Number(weight) / Number(height) / Number(height)] * 10000
+        ).toFixed(1);
+        setBmi(val);
+        if (val < 18.5) {
+            setInfo("Under Weight");
+        } else if (val > 18.5 && val <= 24.9) {
+            setInfo("Healthy");
+        } else if (val > 24.9 && val < 30) {
+            setInfo("Overweight");
+        } else {
+            setInfo("Obese");
+        }
+
+    };
 
     return (
 
@@ -14,14 +36,14 @@ export default function Index() {
                 <div className="swiper-wrapper p-relative">
                     <div className="hero-pagination"/>
                     <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
+                        <div className="slide-bg bg-1" />
                         <div className="container">
                             <div className="row ">
                                 <div className="col-lg-12">
                                     <div className="slider-all-text">
-                                        <span data-animation="fadeInUp" data-delay=".2s">Fitness Zone</span>
-                                        <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">be storong</h2>
-                                        <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">Hardest part is walking out in the front door</p>
+                                        <span data-animation="fadeInUp" data-delay=".2s">Fitness Centre</span>
+                                        <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">be powerful</h2>
+                                        <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">The hardest thing is to start</p>
                                         <div className="play-option" data-animation="fadeInUp" data-delay=".8s">
                                             <a href="about.js" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/> </a>
                                             <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
@@ -30,62 +52,9 @@ export default function Index() {
                                         </div>
                                     </div>
                                     <div className="hero-social-icon">
-                                        <a href="#"><i className="fab fa-facebook-f"/></a>
-                                        <a href="#"><i className="fab fa-twitter"/></a>
-                                        <a href="#"><i className="fab fa-instagram"/></a>
-                                        <a href="#"><i className="fab fa-google"/></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
-                        <div className="container">
-                            <div className="row ">
-                                <div className="col-lg-12">
-                                    <div className="slider-all-text">
-                                        <span data-animation="fadeInUp" data-delay=".2s">Fitness Zone</span>
-                                        <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">be Stronger</h2>
-                                        <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">Out in the front door, hardest part is walking</p>
-                                        <div className="play-option" data-animation="fadeInUp" data-delay=".8s">
-                                            <a href="about.html" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/></a>
-                                            <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
-                                                <i className="fas fa-play"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="hero-social-icon">
-                                        <a href="#"><i className="fab fa-facebook-f"/></a>
-                                        <a href="#"><i className="fab fa-twitter"/></a>
-                                        <a href="#"><i className="fab fa-instagram"/></a>
-                                        <a href="#"><i className="fab fa-google"/></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="item-slider swiper-slide">
-                        <div className="slide-bg" data-background="assets/img/bg/slider7.jpg"/>
-                        <div className="container">
-                            <div className="row ">
-                                <div className="col-lg-12">
-                                    <div className="slider-all-text">
-                                        <span data-animation="fadeInUp" data-delay=".2s">Fitness Area</span>
-                                        <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">Fitness Made</h2>
-                                        <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">Hardest part is walking out in the front door</p>
-                                        <div className="play-option" data-animation="fadeInUp" data-delay=".8s">
-                                            <a href="about.html" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/></a>
-                                            <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
-                                                <i className="fas fa-play"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div className="hero-social-icon">
-                                        <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i className="fab fa-twitter"></i></a>
-                                        <a href="#"><i className="fab fa-instagram"></i></a>
-                                        <a href="#"><i className="fab fa-google"></i></a>
+                                        <a href="https://www.facebook.com/FitnessFirstGER"target="_blank"><i className="fab fa-facebook"/></a>
+                                        <a href="https://www.instagram.com/fitnessfirstger/"target="_blank"><i className="fab fa-instagram"/></a>
+                                        <a href="https://www.youtube.com/user/FitnessFirstGER"target="_blank"><i className="fab fa-youtube"/></a>
                                     </div>
                                 </div>
                             </div>
@@ -102,7 +71,7 @@ export default function Index() {
                             <div className="tpfeatures-icon mb-25">
                                 <i className="flaticon-muscle"/>
                             </div>
-                            <span>Dedicated Services</span>
+                            <span>Services</span>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3">
@@ -110,7 +79,7 @@ export default function Index() {
                             <div className="tpfeatures-icon mb-25">
                                 <i className="flaticon-customer"/>
                             </div>
-                            <span>Qualified Instructor</span>
+                            <span>Instructors</span>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3">
@@ -119,7 +88,7 @@ export default function Index() {
                             <div className="tpfeatures-icon mb-25">
                                 <i className="flaticon-apple"/>
                             </div>
-                            <span>Organic Proteins</span>
+                            <span>Proteins</span>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-3">
@@ -127,7 +96,7 @@ export default function Index() {
                             <div className="tpfeatures-icon mb-25">
                                 <i className="flaticon-lawn-mower"/>
                             </div>
-                            <span>Award Programs</span>
+                            <span>Programs</span>
                         </div>
                     </div>
                 </div>
@@ -137,44 +106,33 @@ export default function Index() {
         <div className="tp-about-area pb-95 pt-80">
             <div className="container">
                 <div className="row">
-                    <div className="col-xl-5 col-lg-6">
-                        <div className="about-image mb-30 wow fadeInUp" data-wow-delay=".4s">
-                            <img src="assets/img/about/about-1.jpg" alt="" className="img-fluid"/>
-                                <div className="about-shape">
-                                    <img src="assets/img/about/about-shape.png" alt=""/>
-                                        <div className="content">
-                                            <h4>25 + Year</h4>
-                                            <span>Work Experience</span>
-                                        </div>
-                                </div>
-                        </div>
-                    </div>
+                    {/*<div className="col-xl-5 col-lg-6">*/}
+                    {/*    <div className="about-image mb-30 wow fadeInUp" data-wow-delay=".4s">*/}
+                    {/*        <img src="assets/img/about/about-1.jpg" alt="" className="img-fluid"/>*/}
+                    {/*            <div className="about-shape">*/}
+                    {/*                <img src="assets/img/about/about-shape.png" alt=""/>*/}
+                    {/*                    <div className="content">*/}
+                    {/*                        <h4>25 + Year</h4>*/}
+                    {/*                        <span>Work Experience</span>*/}
+                    {/*                    </div>*/}
+                    {/*            </div>*/}
+                    {/*    </div>*/}
+                    {/*</div>*/}
                     <div className="col-xl-7 col-lg-6 ">
                         <div className="about-info wow fadeInUp" data-wow-delay=".7s">
                             <div className="section-wrap">
                                 <span className="tpsub-title mb-15">About us</span>
-                                <h3 className="section-title mb-20">Make yourself stronger than
-                                    your best excuses</h3>
+                                <h3 className="section-title mb-20">Many people fail just because they give up within a stone's throw of success.</h3>
                                 <span className="section-border mb-20"><i className="far fa-circle"/></span>
-                                <p className="section-description mb-40">Duis nunc sodales conubia a laoreet aliquet on
-                                    nostra eleifend lacinia prasent hendrerit quisque penatibus erat a pulvina integer
-                                    semper ridiculus lectus con dimentum obor tise verodar capmtaso morin</p>
+                                <p className="section-description mb-40">We have been working for 25 years. We will help you to make your figure better, your mind clearer and your body more elastic.</p>
                             </div>
                             <blockquote className="ab-bquote">
-                           <span>Push harder than yesterday if you want on
-                              the different tomorrow.</span>
+                           <span>Salvation is on the move.</span>
                                 <div className="quote">
                                     <img src="assets/img/about/quote.png" alt=""/>
                                 </div>
                             </blockquote>
                             <div className="author-info">
-                                <div className="author-data">
-                                    <div className="author_img mb-30"><a href="#"><img src="assets/img/about/author.jpg" alt=""/></a></div>
-                                    <div className="author-degination mb-30">
-                                        <h4>Mark Hander</h4>
-                                        <span>CEO - Fetoxe</span>
-                                    </div>
-                                </div>
                                 <div className="about-btn mb-30">
                                     <a href="about.html" className="tp-btn-round">What do we do <i className="fal fa-chevron-double-right"/></a>
                                 </div>
@@ -203,7 +161,7 @@ export default function Index() {
                                 </div>
                             </div>
                             <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Weight Lifting</a></h4>
-                            <p className="mb-25">Commodo metuse a dictum faucibus felis</p>
+                            <p className="mb-25">Large selection of trainers and fixtures</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
                     </div>
@@ -216,7 +174,7 @@ export default function Index() {
                             </div>
                             <h4 className="services-item-title services-item-title-2 mb-20"><a
                                 href="protfolio-details.html">Power Yoga</a></h4>
-                            <p className="mb-25">Feugiat varius facilisis mus, Commodo metu</p>
+                            <p className="mb-25">Develops the flexibility of your body</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
                     </div>
@@ -228,7 +186,7 @@ export default function Index() {
                                 </div>
                             </div>
                             <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Crosfit Tools</a></h4>
-                            <p className="mb-25">Dictum faucibus felis, Feugiat varius facilisis</p>
+                            <p className="mb-25">We provide the best tools and training</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
                     </div>
@@ -240,7 +198,7 @@ export default function Index() {
                                 </div>
                             </div>
                             <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Body Building</a></h4>
-                            <p className="mb-25">Varius facilisis Dictum faucibus feugiat facil</p>
+                            <p className="mb-25">We create your personal training and nutrition plan</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
                     </div>
@@ -257,7 +215,7 @@ export default function Index() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="counter-item counter-item-border">
                                         <div className="counter-number">
-                                            <h4><span className="counter">330</span></h4>
+                                            <h4><span className="counter">520</span></h4>
                                         </div>
                                         <div className="counterinfo">
                                             <i className="flaticon-support"/>
@@ -271,7 +229,7 @@ export default function Index() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="counter-item counter-item-border">
                                         <div className="counter-number">
-                                            <h4><span className="counter">430</span></h4>
+                                            <h4><span className="counter">2100</span></h4>
                                         </div>
                                         <div className="counterinfo">
                                             <i className="flaticon-feedback"/>
@@ -285,7 +243,7 @@ export default function Index() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="counter-item counter-item-border">
                                         <div className="counter-number">
-                                            <h4><span className="counter">230</span></h4>
+                                            <h4><span className="counter">330</span></h4>
                                         </div>
                                         <div className="counterinfo">
                                             <i className="flaticon-kettlebells"/>
@@ -299,7 +257,7 @@ export default function Index() {
                                 <div className="col-lg-3 col-md-6">
                                     <div className="counter-item">
                                         <div className="counter-number">
-                                            <h4><span className="counter">540</span></h4>
+                                            <h4><span className="counter">740</span></h4>
                                         </div>
                                         <div className="counterinfo">
                                             <i className="flaticon-medal"/>
@@ -324,14 +282,13 @@ export default function Index() {
                         <div className="col-xl-6 col-lg-7">
                             <div className="section-wrap">
                                 <span className="tpsub-title mb-15">Fitness gallery</span>
-                                <h3 className="section-title mb-20">Solutions for moving better and feeling a
-                                    healthier</h3>
+                                <h3 className="section-title mb-20">Sports are remarkable for the improvisation of skill.</h3>
                                 <span className="section-border mb-30"><i className="far fa-circle"/></span>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-5">
                             <div className="fitness_button">
-                                <a href="protfolio-details.html" className="tp-btn-round">All showcase <i className="fal fa-chevron-double-right"/></a>
+                                <a href="protfolio-details.html" className="tp-btn-round">See more <i className="fal fa-chevron-double-right"/></a>
                             </div>
                         </div>
                     </div>
@@ -432,7 +389,7 @@ export default function Index() {
                 <div className="section-wrap-two text-center">
                     <span className="tpsub-title-two mb-15"><i className="far fa-circle"/>our schedule<i
                         className="far fa-circle"/></span>
-                    <h3 className="section-title-two  mb-30">Check our every special gemoxe schedule for you </h3>
+                    <h3 className="section-title-two  mb-30">Check our every special schedule for winter </h3>
                 </div>
             </div>
             <div className="schedule-shape-bg fix">
@@ -533,16 +490,14 @@ export default function Index() {
             </div>
         </div>
 
-        <div className="video-area p-relative" data-background="assets/img/bg/video-bg.jpg">
+        <div className="video-area p-relative bg-video" data-background="assets/img/bg/video-bg.jpg">
             <div className="container">
                 <div className="video-content text-center wow fadeInUp" data-wow-delay=".3s">
                     <a className="video-play-button ab-play_btn hero-play popup-video mb-45"
-                       href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
+                       href="https://www.youtube.com/user/FitnessFirstGER">
                         <i className="fas fa-play"/>
                     </a>
-                    <h4 className="video-title">Push harder than yesterday your
-                        Solutions moving better and feeling
-                        different tomorrow</h4>
+                    <h4 className="video-title">Overpower. Overtake. Overcome.</h4>
                 </div>
             </div>
         </div>
@@ -550,15 +505,10 @@ export default function Index() {
             <div className="container">
                 <div className="row justify-content-center">
                     <div className="col-xl-6 col-lg-6">
-                        <div className="choose-iamge mb-30">
-                            <img src="assets/img/bg/choose.jpg" alt="choose-img"/>
-                        </div>
-                    </div>
-                    <div className="col-xl-6 col-lg-6">
                         <div className="choose-info">
                             <div className="section-wrap mb-35">
                                 <span className="tpsub-title mb-15">Why choose us</span>
-                                <h3 className="section-title mb-20">Make yourself stronger than your best excuses</h3>
+                                <h3 className="section-title mb-20">The past doesn’t matter. Take today.</h3>
                                 <span className="section-border mb-30"><i className="far fa-circle"/></span>
                             </div>
                             <div className="choose-list mb-40">
@@ -569,8 +519,7 @@ export default function Index() {
                                 </div>
                                 <div className="choose-content">
                                     <h5>Cardio Exercise</h5>
-                                    <p>Sultan and interdu mmassa pellentesque mattis vulputate nam hyme lectus
-                                        parturient accumsan.</p>
+                                    <p>Increases heart rate and respiration, raises oxygen</p>
                                 </div>
                             </div>
                             <div className="choose-list mb-40">
@@ -580,9 +529,8 @@ export default function Index() {
                                     </div>
                                 </div>
                                 <div className="choose-content">
-                                    <h5>Cardio Exercise</h5>
-                                    <p>Lectus parturient pellentesque accumsan mattis vulputate nam hyme sultan and
-                                        interdum massa.</p>
+                                    <h5>Strength Exercise</h5>
+                                    <p>Help build muscle and improve health</p>
                                 </div>
                             </div>
                             <div className="choose-list mb-40">
@@ -592,9 +540,8 @@ export default function Index() {
                                     </div>
                                 </div>
                                 <div className="choose-content">
-                                    <h5>Cardio Exercise</h5>
-                                    <p>Vulputate nam massa pellentesque accumsan hyme lectus parturient sultan and
-                                        interdum mattis.</p>
+                                    <h5>Yoga Exercise</h5>
+                                    <p>Helps to eliminate overwork and anxiety</p>
                                 </div>
                             </div>
                         </div>
@@ -610,8 +557,7 @@ export default function Index() {
                         <div className="section-wrap-two text-center wow fadeInUp" data-wow-delay=".2s">
                             <span className="tpsub-title-two mb-15"><i className="far fa-circle"/>Best Trainer<i
                                 className="far fa-circle"/></span>
-                            <h3 className="section-title-two  mb-30">Dedicated and professional trainer ready to
-                                supporting</h3>
+                            <h3 className="section-title-two  mb-30">Professional trainers who will lead you to success in a short time</h3>
                         </div>
                     </div>
                 </div>
@@ -621,7 +567,7 @@ export default function Index() {
                     <div className="col-xxl-3 col-lg-4 col-md-6">
                         <div className="trainer-single wow fadeInUp mb-30" data-wow-delay=".4s">
                             <div className="trainer-image">
-                                <a href="team-details.html"><img src="assets/img/trainer/trainer-1.jpg" alt=""/></a>
+                                <img src="coach1.jpg" alt=""/>
                             </div>
                             <div className="trainer-info">
                                 <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
@@ -705,66 +651,30 @@ export default function Index() {
         <div className="company-static-area" data-background="assets/img/bg/static-bg.jpg">
             <div className="container custome-container">
                 <div className="row justify-content-center align-items-center">
-                    <div className="col-xl-7 col-lg-5 col-md-12">
+                    <div className="col-xl-7 col-lg-5 col-md-12 block_near_calculater">
                         <div className="section-wrap">
                             <span className="tpsub-title mb-15">company statics</span>
-                            <h3 className="section-title mb-20">Everything you want outside your comfort zone</h3>
+                            <h3 className="section-title mb-20">Calculate your body mass index</h3>
                             <span className="section-border mb-20"><i className="far fa-circle"/></span>
-                            <p className="section-description mb-30">Duis nunc sodales conubia a laoreet aliquet on
-                                nostra eleifend lacinia prasent hendrerit quisque penatibus erat a pulvina integer
-                                semper ridiculus lectus con dimentum obor tise verodar capmtaso morin</p>
-                        </div>
-                        <div className="tp-skill--content">
-                            <div className="tp-skill__wrapper mb-25 fix">
-                                <div className="tp-skill--title__wrapper">
-                                    <h5 className="tp-skill--title">Client Satisfaction</h5>
-                                </div>
-                                <div className="progress">
-                                    <div className="progress-bar wow slideInLeft" data-wow-duration="1s"
-                                         data-wow-delay=".3s" role="progressbar" data-width="90%" aria-valuenow="90"
-                                         aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
-                                </div>
-                            </div>
-                            <div className="tp-skill__wrapper mb-30 fix">
-                                <div className="tp-skill--title__wrapper">
-                                    <h5 className="tp-skill--title">Support Customer</h5>
-                                </div>
-                                <div className="progress progress-two">
-                                    <div className="progress-bar-two progress-bar wow slideInLeft"
-                                         data-wow-duration="1s" data-wow-delay=".3s" role="progressbar" data-width="70%"
-                                         aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
-                                </div>
-                            </div>
+                            <p className="section-description mb-30">A simple weight-for-height ratio often used to diagnose obesity and overweight in adults.</p>
                         </div>
                     </div>
                     <div className="col-xl-5 col-lg-7 col-md-12">
-                        <div className="tp-calculate mb-30">
-                            <form action="#" className="calculate-form-wrapper">
+                        <div className=" mb-30">
+                            <form action={"#"} className="calculate-form-wrapper">
                                 <h3 className="tp-calculate-form-title mb-30">BMI Calculator</h3>
                                 <div className="input-field mb-15">
-                                    <input type="text" placeholder="Height"/>
+                                    <input type="text" onChange={(e) => setHeight(e.target.value)}name={height} placeholder="Height"/>
                                 </div>
                                 <div className="input-field mb-15">
-                                    <input type="text" placeholder="Weight"/>
-                                </div>
-                                <div className="input-field select-field-arrow mb-15 p-relative">
-                                    <select>
-                                        <option value="" disabled selected hidden>Gender</option>
-                                        <option value="">Male</option>
-                                        <option value="">Female</option>
-                                        <option value="">Other</option>
-                                    </select>
-                                </div>
-                                <div className="input-field mb-15">
-                                    <input type="text" placeholder="Age"/>
-                                </div>
-                                <div className="input-field mb-15">
-                                    <input type="text" placeholder="Inches"/>
+                                    <input type="text" onChange={(e) => setWeight(e.target.value)} name={weight} placeholder="Weight"/>
                                 </div>
                                 <div className="input-field">
-                                    <button type="submit" className="calculate-btn"> Calculate now <i
+                                    <button type="submit" onClick={handleBmi} className="calculate-btn" > Calculate now <i
                                         className="fal fa-chevron-double-right"/></button>
                                 </div>
+                                <h1>{bmi}</h1>
+                                <h2>{info}</h2>
                             </form>
                         </div>
                     </div>
@@ -772,68 +682,6 @@ export default function Index() {
             </div>
         </div>
 
-        <div className="testimonial-area">
-            <div className="container">
-                <div className="pt-120 pb-115" data-background="assets/img/testimonial/testimonial-bg.png">
-                    <div className="row justify-content-center">
-                        <div className="col-xxl-10 col-xl-11 col-lg-12">
-                            <div className="swiper-container testimonial_active">
-                                <div className="testimonial-wrapper swiper-wrapper wow fadeInUp" data-wow-delay=".4s">
-                                    <div className="testimonial-slider-item swiper-slide text-center">
-                                        <div className="tesimonial-quote mb-60">
-                                            <img src="assets/img/testimonial/testimoinal-quote.png" alt=""/>
-                                        </div>
-                                        <div className="testimonial-info">
-                                            <p className="testimonial_description pb-50">Eleifend dis luctus be hace
-                                                sociis porta sociosqu praesent lobortis tortor augue enim muse saoreet
-                                                aenean litorace uterns dictum dolor convallis urnan erose nulla semper
-                                                elementum primis tempor enim hac ante id sagittis suscipit nunc per
-                                                luctus lacus utern aliquet nase vele anic scelerisque dus dapibus
-                                                feugiat scelerisque metre</p>
-                                            <h5 className="client-name">Calwen Synton</h5>
-                                            <span className="client-degination">Sr Designer</span>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-slider-item swiper-slide text-center">
-                                        <div className="tesimonial-quote mb-60">
-                                            <img src="assets/img/testimonial/testimoinal-quote.png" alt=""/>
-                                        </div>
-                                        <div className="testimonial-info">
-                                            <p className="testimonial_description pb-50">Sagittis suscipit nunc per
-                                                luctus lacus utern aliquet nase vele anic scelerisque dus dapibus
-                                                feugiat scelerisque metre. eleifend dis luctus be hace sociis porta
-                                                sociosqu praesent lobortis tortor augue enim muse saoreet aenean
-                                                litorace uterns dictum dolor convallis urnan erose nulla semper
-                                                elementum primis tempor enim hac ante id.</p>
-                                            <h5 className="client-name">Andrew Jekson</h5>
-                                            <span className="client-degination">Sr Devloper</span>
-                                        </div>
-                                    </div>
-                                    <div className="testimonial-slider-item swiper-slide text-center">
-                                        <div className="tesimonial-quote mb-60">
-                                            <img src="assets/img/testimonial/testimoinal-quote.png" alt=""/>
-                                        </div>
-                                        <div className="testimonial-info">
-                                            <p className="testimonial_description pb-50">Suscipit elementum sagittis
-                                                nunc per luctus lacus utern aliquet nase vele anic scelerisque dus
-                                                dapibus feugiat scelerisque metre. eleifend dis luctus be hace sociis
-                                                porta sociosqu praesent lobortis tortor augue enim muse saoreet aenean
-                                                litorace uterns dictum dolor urnan erose nulla semper primis tempor enim
-                                                hac ante id convallis.</p>
-                                            <h5 className="client-name">Synton Calwen</h5>
-                                            <span className="client-degination">Sr Designer</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="swiper-button-prev ts-button ts-button-prev"/>
-                                <div className="swiper-button-next ts-button ts-button-next"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div className="priceing-area pt-115 pb-90">
             <div className="container custome-container">
@@ -853,11 +701,8 @@ export default function Index() {
                         <div className="row">
                             <div className="col-lg-4 col-md-6">
                                 <div className="price_item mb-30 wow fadeInUp" data-wow-delay=".6s">
-                                    <div className="priceing_image mb-10">
-                                        <img src="assets/img/priceing/price1.jpg" alt="" className="img-fluid"/>
-                                    </div>
-                                    <div className="price_info pt-80"
-                                         data-background="assets/img/priceing/price-bg.png">
+                                    <div className="priceing_image mb-10 bg_price"/>
+                                    <div className=" price_info pt-80">
                                         <div className="price text-center">
                                             <div className="inner">
                                                 <h5>$35</h5>
@@ -881,14 +726,12 @@ export default function Index() {
                             </div>
                             <div className="col-lg-4 col-md-6">
                                 <div className="price_item mb-30 wow fadeInUp" data-wow-delay=".9s">
-                                    <div className="priceing_image priceing_image-active mb-10 ">
-                                        <img src="assets/img/priceing/price2.jpg" alt="" className="img-fluid"/>
+                                    <div className="priceing_image priceing_image-active mb-10 bg_price">
                                             <div className="price__popular">
                                                 <span>popular</span>
                                             </div>
                                     </div>
-                                    <div className="price_info pt-80"
-                                         data-background="assets/img/priceing/price-bg2.png">
+                                    <div className="price_info pt-80">
                                         <div className="price price-active text-center">
                                             <div className="inner">
                                                 <h5>$40</h5>
@@ -913,11 +756,8 @@ export default function Index() {
                             </div>
                             <div className="col-lg-4 col-md-6">
                                 <div className="price_item mb-30 wow fadeInUp" data-wow-delay="1.2s">
-                                    <div className="priceing_image mb-10">
-                                        <img src="assets/img/priceing/price3.jpg" alt="" className="img-fluid"/>
-                                    </div>
-                                    <div className="price_info pt-80"
-                                         data-background="assets/img/priceing/price-bg.png">
+                                    <div className="priceing_image mb-10 bg_price"/>
+                                    <div className="price_info pt-80">
                                         <div className="price text-center">
                                             <div className="inner">
                                                 <h5>$45</h5>
@@ -961,7 +801,7 @@ export default function Index() {
                         <div className="col-lg-6">
                             <div className="section-wrap">
                                 <span className="tpsub-title mb-15">our goods</span>
-                                <h3 className="section-title mb-20">Quality products buying our online gym store</h3>
+                                <h3 className="section-title mb-20">Quality products in our online gym store</h3>
                                 <span className="section-border mb-30"><i className="far fa-circle"></i></span>
                             </div>
                         </div>
@@ -978,7 +818,7 @@ export default function Index() {
                             <div className="prouct-wrapper">
                                 <div className="product_thum product_thum-new mb-30">
                                     <div className="fix">
-                                        <a href="shop-details.html"><img src="assets/img/product/product-1.jpg" className="img-fluid" alt="product-img"/></a>
+                                        <a href="shop-details.html"><img src="store_2.jpg" className="img-fluid" alt="product-img"/></a>
                                     </div>
                                     <div className="sale-tag">
                                         <span className="new">new</span>
@@ -986,7 +826,6 @@ export default function Index() {
                                     <div className="product-item-action">
                                         <a href="wishlist.html"><i className="far fa-heart"></i></a>
                                         <a href="assets/img/product/product-1.jpg" className="image-popups"><i className="fas fa-compress"></i></a>
-                                        <a href="checkout.html"><i className="far fa-exchange"></i></a>
                                     </div>
                                 </div>
                                 <div className="product-content">
@@ -1011,7 +850,6 @@ export default function Index() {
                                     <div className="product-item-action">
                                         <a href="wishlist.html"><i className="far fa-heart"></i></a>
                                         <a href="assets/img/product/product-2.jpg" className="image-popups"><i className="fas fa-compress"></i></a>
-                                        <a href="checkout.html"><i className="far fa-exchange"></i></a>
                                     </div>
                                 </div>
                                 <div className="product-content">
@@ -1039,7 +877,6 @@ export default function Index() {
                                     <div className="product-item-action">
                                         <a href="wishlist.html"><i className="far fa-heart"></i></a>
                                         <a href="assets/img/product/product-3.jpg" className="image-popups"><i className="fas fa-compress"/></a>
-                                        <a href="checkout.html"><i className="far fa-exchange"></i></a>
                                     </div>
                                 </div>
                                 <div className="product-content">
@@ -1078,87 +915,17 @@ export default function Index() {
                                     <div className="row g-0">
                                         <div className="col-lg-6">
                                             <div className="blog-image">
-                                                <a href="blog-details.html"><img src="assets/img/blog/blog-1.jpg" className="img-fluid" alt="blog-img"/></a>
+                                                <a href="blog-details.html"><img src="coach1.jpg" className="img-fluid" alt="blog-img"/></a>
                                             </div>
                                         </div>
                                         <div className="col-lg-6">
                                             <div className="blog_content mt-85"
                                                  data-background="assets/img/blog/blog-bg.jpg">
                                                 <div className="blog-info">
-                                                    <div className="blog__meta mb-15">
-                                                        <span><a href="#"><i className="far fa-bookmark"/>Fitness Workout</a></span>
-                                                        <span><a href="#"><i className="far fa-comments"/> 02 Comment</a></span>
-                                                    </div>
-                                                    <h5 className="blog_title mb-20"><a href="blog-details.html">Risus purus namien parturient accumsan cacus pulvinar magna.</a></h5>
-                                                    <p className="mb-40">Tincidunt litora eget pulvinar fringilla
-                                                        rhoncus cuirae tristique, tortor orci Etiam auctor torquent vel
-                                                        tortor porta class natoque est luctus at rutrum ipsum porttitor
-                                                        viverra in curabitur conubia non vivamus hymenaeos enim
-                                                        suscipit.</p>
+                                                    <h5 className="blog_title mb-20"><a href="blog-details.html">Best Coach of the Month</a></h5>
+                                                    <p className="mb-40">The best coach of the month won a $500 prize! We invite you to work in our fitness center. Be sure to enter next month's competition!</p>
                                                     <div className="blog-button">
                                                         <a href="blog-details.html" className="tp-btn-round">Read More <i className="fal fa-chevron-double-right"></i></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bolg_slider_item swiper-slide">
-                                    <div className="row g-0">
-                                        <div className="col-lg-6">
-                                            <div className="blog-image">
-                                                <a href="blog-details.html"><img src="assets/img/blog/blog-2.jpg" className="img-fluid" alt="blog-img"/></a>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="blog_content mt-85"
-                                                 data-background="assets/img/blog/blog-bg.jpg">
-                                                <div className="blog-info">
-                                                    <div className="blog__meta mb-15">
-                                                        <span><a href="#"> <i className="far fa-bookmark"/> Fitness Workout </a> </span>
-                                                        <span><a href="#"> <i className="far fa-comments"/> 02 Comment </a> </span>
-                                                    </div>
-                                                    <h5 className="blog_title mb-20"><a href="blog-details.html">Parturient accumsan cacus pulvinar magna, Risus purus namien.</a></h5>
-                                                    <p className="mb-40">Fringilla rhoncus cuirae tristique tincidunt
-                                                        litora eget pulvinar, tortor orci Etiam auctor torquent vel
-                                                        tortor porta class natoque est luctus at rutrum ipsum porttitor
-                                                        viverra in curabitur conubia non vivamus hymenaeos enim
-                                                        suscipit.</p>
-                                                    <div className="blog-button">
-                                                        <a href="blog-details.html" className="tp-btn-round">Read More <i className="fal fa-chevron-double-right"/></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="bolg_slider_item swiper-slide">
-                                    <div className="row g-0">
-                                        <div className="col-lg-6">
-                                            <div className="blog-image">
-                                                <a href="blog-details.html"><img src="assets/img/blog/blog-3.jpg" className="img-fluid" alt="blog-img"/></a>
-                                            </div>
-                                        </div>
-                                        <div className="col-lg-6">
-                                            <div className="blog_content mt-85"
-                                                 data-background="assets/img/blog/blog-bg.jpg">
-                                                <div className="blog-info">
-                                                    <div className="blog__meta mb-15">
-                                                        <span><a href="#"><i className="far fa-bookmark"/>Fitness Workout</a></span>
-                                                        <span><a href="#"><i className="far fa-comments"/> 02 Comment</a></span>
-                                                    </div>
-                                                    <h5 className="blog_title mb-20">
-                                                        <a href="blog-details.html">Going to the gym for the first time
-                                                            doesnвЂ™t need to be daunting</a>
-                                                    </h5>
-                                                    <p className="mb-40">Etiam auctor torquent vel tortor porta class
-                                                        natoque est luctus at rutrum ipsum porttitor viverra in
-                                                        curabitur conubia non vivamus hymenaeos enim suscipit. Fringilla
-                                                        rhoncus cuirae tristique tincidunt litora eget pulvinar
-                                                        orci.</p>
-                                                    <div className="blog-button">
-                                                        <a href="blog-details.html" className="tp-btn-round">Read
-                                                            More <i className="fal fa-chevron-double-right"></i></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1168,9 +935,7 @@ export default function Index() {
                             </div>
                         </div>
 
-                        <div className="swiper-button-prev bs-button bs-button-prev"><i className="far fa-long-arrow-left"></i></div>
-                        <div className="swiper-button-next bs-button bs-button-next"><i className="far fa-long-arrow-right"></i></div>
-                    </div>
+                        </div>
                 </div>
             </div>
         </div>
@@ -1363,5 +1128,6 @@ export default function Index() {
     {/*</div>*/}
 
     </section>
+
     )
 }

@@ -1659,6 +1659,7 @@ textarea:focus {
   }
 }
 .hero-social-icon a {
+  pointer-events: all;
   font-size: 25px;
   color: #ffffff;
   margin-bottom: 45px;
@@ -1902,7 +1903,7 @@ textarea:focus {
 
 .futexo-tab-all h5,
 .futexo-tab-all .schedule-icon {
-  background-color: #000000;
+  background-color: #152136;
   color: #fff;
   text-align: center;
   padding: 50px 0;
@@ -2201,49 +2202,49 @@ textarea:focus {
   }
 }
 
-.about-shape {
-  position: absolute;
-  right: 22px;
-  bottom: -22%;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1399px) {
-  .about-shape {
-    right: -30px;
-    bottom: -35%;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .about-shape {
-    right: -30px;
-    bottom: -5%;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .about-shape {
-    right: 0px;
-    bottom: 0;
-  }
-}
-@media (max-width: 575px) {
-  .about-shape {
-    display: none;
-  }
-}
-.about-shape .content {
-  position: absolute;
-  right: 32%;
-  top: 24%;
-  transform: rotate(-28deg);
-}
-.about-shape .content h4 {
-  font-size: 55px;
-  color: #ffffff;
-}
-.about-shape .content span {
-  font-size: 40px;
-  color: #ffffff;
-  display: block;
-}
+/*.about-shape {*/
+/*  position: absolute;*/
+/*  right: 22px;*/
+/*  bottom: -22%;*/
+/*}*/
+/*@media only screen and (min-width: 1200px) and (max-width: 1399px) {*/
+/*  .about-shape {*/
+/*    right: -30px;*/
+/*    bottom: -925%;*/
+/*  }*/
+/*}*/
+/*@media only screen and (min-width: 768px) and (max-width: 991px) {*/
+/*  .about-shape {*/
+/*    right: -30px;*/
+/*    bottom: -5%;*/
+/*  }*/
+/*}*/
+/*@media only screen and (min-width: 576px) and (max-width: 767px) {*/
+/*  .about-shape {*/
+/*    right: 0px;*/
+/*    bottom: 0;*/
+/*  }*/
+/*}*/
+/*@media (max-width: 575px) {*/
+/*  .about-shape {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+/*.about-shape .content {*/
+/*  position: absolute;*/
+/*  right: 32%;*/
+/*  top: 24%;*/
+/*  transform: rotate(-28deg);*/
+/*}*/
+/*.about-shape .content h4 {*/
+/*  font-size: 55px;*/
+/*  color: #ffffff;*/
+/*}*/
+/*.about-shape .content span {*/
+/*  font-size: 40px;*/
+/*  color: #ffffff;*/
+/*  display: block;*/
+/*}*/
 
 .about-info {
   margin-left: 120px;
@@ -2356,7 +2357,6 @@ textarea:focus {
 }
 
 .choose-us-area {
-  margin-right: 7%;
   margin-top: -185px;
   position: relative;
   background: #ffffff;
@@ -2386,7 +2386,7 @@ textarea:focus {
   }
 }
 
-.choose-iamge img {
+.choose-image img {
   width: 100%;
 }
 
@@ -2491,15 +2491,7 @@ textarea:focus {
   display: block;
   position: relative;
 }
-.tpsub-title-two::before {
-  position: absolute;
-  content: "";
-  background: #ea1b29;
-  width: 25px;
-  height: 2px;
-  top: 11px;
-  left: 225px;
-}
+
 @media (max-width: 480px) {
   .tpsub-title-two::before {
     left: 50px;
@@ -2515,15 +2507,7 @@ textarea:focus {
     left: 120px;
   }
 }
-.tpsub-title-two::after {
-  position: absolute;
-  content: "";
-  background: #ea1b29;
-  width: 25px;
-  height: 2px;
-  top: 11px;
-  right: 225px;
-}
+
 @media (max-width: 480px) {
   .tpsub-title-two::after {
     right: 50px;
@@ -2573,15 +2557,7 @@ textarea:focus {
   color: #ea1b29;
   font-size: 15px;
 }
-.section-border::before {
-  position: absolute;
-  content: "";
-  width: 95px;
-  height: 2px;
-  background: #ea1b29;
-  top: 35%;
-  left: 25px;
-}
+
 
 .section-wrap-two {
   max-width: 665px;
@@ -2606,7 +2582,7 @@ textarea:focus {
 }
 .page__title::before {
   position: absolute;
-  width: 100%;
+
   height: 100%;
   background: #0009;
   content: "";
@@ -2694,7 +2670,7 @@ textarea:focus {
 
 .services-item {
   padding: 50px 30px 30px 20px;
-  background-color: #1f1f1f;
+  background-color: #152136;
   transition: 0.3s;
 }
 .services-item p {
@@ -3057,9 +3033,6 @@ textarea:focus {
   margin-bottom: 0;
 }
 
-.price-active {
-  border: 8px solid #bfbfbf;
-}
 
 .tp_pricing-list {
   margin-left: 50px;
@@ -3084,15 +3057,6 @@ textarea:focus {
   line-height: 30px;
   border: 1px solid #ddd;
   border-radius: 50%;
-}
-
-.tp_pricing-list-active ul li {
-  color: #ffffff;
-}
-.tp_pricing-list-active ul li i {
-  color: #ffffff;
-  background: #313131;
-  border: none;
 }
 
 .price__popular {
@@ -3141,14 +3105,7 @@ textarea:focus {
   line-height: 1.2;
 }
 
-.price_type-active {
-  color: #ffffff;
-}
 
-.servic_btn-active {
-  background: transparent;
-  border-color: #ea1b29;
-}
 .servic_btn-active:hover {
   background: #ea1b29;
   border-color: #ea1b29;
@@ -6109,7 +6066,7 @@ p.checkout-coupon input[type=text]::placeholder {
 }
 
 .footer_top-info {
-  border-bottom: 1px solid #373738;
+  background: #0000007d;
 }
 
 .news-letter-title {

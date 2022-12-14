@@ -1,0 +1,9 @@
+.bg-main{
+    background-image: url("../img/bg-2.png");
+}
+.form__input ._error{
+    box-shadow: 0 0 15px #0050ff;
+}
+.markercluster-map {
+    height: 20vh;
+}
