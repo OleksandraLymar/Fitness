@@ -23,6 +23,9 @@ export default function Index() {
         }
 
     };
+    const resultbmi=()=>{
+        alert(handleBmi());
+    }
 
     return (
 
@@ -106,18 +109,6 @@ export default function Index() {
         <div className="tp-about-area pb-95 pt-80">
             <div className="container">
                 <div className="row">
-                    {/*<div className="col-xl-5 col-lg-6">*/}
-                    {/*    <div className="about-image mb-30 wow fadeInUp" data-wow-delay=".4s">*/}
-                    {/*        <img src="assets/img/about/about-1.jpg" alt="" className="img-fluid"/>*/}
-                    {/*            <div className="about-shape">*/}
-                    {/*                <img src="assets/img/about/about-shape.png" alt=""/>*/}
-                    {/*                    <div className="content">*/}
-                    {/*                        <h4>25 + Year</h4>*/}
-                    {/*                        <span>Work Experience</span>*/}
-                    {/*                    </div>*/}
-                    {/*            </div>*/}
-                    {/*    </div>*/}
-                    {/*</div>*/}
                     <div className="col-xl-7 col-lg-6 ">
                         <div className="about-info wow fadeInUp" data-wow-delay=".7s">
                             <div className="section-wrap">
@@ -134,7 +125,7 @@ export default function Index() {
                             </blockquote>
                             <div className="author-info">
                                 <div className="about-btn mb-30">
-                                    <a href="about.html" className="tp-btn-round">What do we do <i className="fal fa-chevron-double-right"/></a>
+                                    <Link to="/about" className="tp-btn-round">What do we do <i className="fal fa-chevron-double-right"/></Link>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +140,7 @@ export default function Index() {
         <div className="services-list mt-100" data-background="assets/img/services/services-bg.jpg">
             <div className="container custome-container">
                 <div className="section-wrap-two text-center wow fadeInUp" data-wow-delay=".2s">
-                    <span className="tpsub-title-two mb-15"><i className="far fa-circle"></i>Our services<i className="far fa-circle"/></span>
+                    <span className="tpsub-title-two mb-15"><i className="far fa-circle"/>Our services<i className="far fa-circle"/></span>
                     <h3 className="section-title-two  mb-30 white-color">Solutions for moving better and feeling a healthier</h3>
                 </div>
                 <div className="row mt-60">
@@ -160,7 +151,7 @@ export default function Index() {
                                     <i className="flaticon-dumbbell"/>
                                 </div>
                             </div>
-                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Weight Lifting</a></h4>
+                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="/about">Weight Lifting</a></h4>
                             <p className="mb-25">Large selection of trainers and fixtures</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
@@ -175,7 +166,7 @@ export default function Index() {
                             <h4 className="services-item-title services-item-title-2 mb-20"><a
                                 href="protfolio-details.html">Power Yoga</a></h4>
                             <p className="mb-25">Develops the flexibility of your body</p>
-                            <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
+                            <a href="/about" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
                     </div>
                     <div className="col-lg-3 col-md-6 col-sm-6">
@@ -185,7 +176,7 @@ export default function Index() {
                                     <i className="flaticon-customer"/>
                                 </div>
                             </div>
-                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Crosfit Tools</a></h4>
+                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="/about">Crosfit Tools</a></h4>
                             <p className="mb-25">We provide the best tools and training</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
@@ -197,7 +188,7 @@ export default function Index() {
                                     <i className="flaticon-lawn-mower"></i>
                                 </div>
                             </div>
-                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="protfolio-details.html">Body Building</a></h4>
+                            <h4 className="services-item-title services-item-title-2 mb-20"><a href="/about">Body Building</a></h4>
                             <p className="mb-25">We create your personal training and nutrition plan</p>
                             <a href="protfolio-details.html" className="services-item-btn">Read More <i className="fal fa-chevron-double-right"/></a>
                         </div>
@@ -281,14 +272,14 @@ export default function Index() {
                     <div className="row justify-content-center align-items-center">
                         <div className="col-xl-6 col-lg-7">
                             <div className="section-wrap">
-                                <span className="tpsub-title mb-15">Fitness gallery</span>
-                                <h3 className="section-title mb-20">Sports are remarkable for the improvisation of skill.</h3>
+                                <span className="tpsub-title mb-15">Our Team</span>
+                                <h3 className="section-title mb-20">Professional trainers who will lead you to success in a short time</h3>
                                 <span className="section-border mb-30"><i className="far fa-circle"/></span>
                             </div>
                         </div>
                         <div className="col-xl-4 col-lg-5">
                             <div className="fitness_button">
-                                <a href="protfolio-details.html" className="tp-btn-round">See more <i className="fal fa-chevron-double-right"/></a>
+                                <a href="/team" className="tp-btn-round">See more <i className="fal fa-chevron-double-right"/></a>
                             </div>
                         </div>
                     </div>
@@ -550,104 +541,6 @@ export default function Index() {
             </div>
         </div>
 
-        <div className="trainer-area pb-150">
-            <div className="container">
-                <div className="row justify-content-center">
-                    <div className="col-lg-10">
-                        <div className="section-wrap-two text-center wow fadeInUp" data-wow-delay=".2s">
-                            <span className="tpsub-title-two mb-15"><i className="far fa-circle"/>Best Trainer<i
-                                className="far fa-circle"/></span>
-                            <h3 className="section-title-two  mb-30">Professional trainers who will lead you to success in a short time</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container">
-                <div className="row mt-35">
-                    <div className="col-xxl-3 col-lg-4 col-md-6">
-                        <div className="trainer-single wow fadeInUp mb-30" data-wow-delay=".4s">
-                            <div className="trainer-image">
-                                <img src="coach1.jpg" alt=""/>
-                            </div>
-                            <div className="trainer-info">
-                                <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                <p className="mb-20">Fitness Trainer</p>
-                                <div className="trainer-soicial-icon">
-                                    <a href="#"><i className="fab fa-facebook-f"/></a>
-                                    <a href="#"><i className="fab fa-twitter"/></a>
-                                    <a href="#"><i className="fab fa-instagram"/></a>
-                                    <a href="#"><i className="fab fa-google"/></a>
-                                </div>
-                            </div>
-                            <div className="trainer-btn">
-                                <a href="team-details.html" className="tp-btn-square"><i className="fal fa-chevron-double-right"/></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xxl-3 col-lg-4 col-md-6">
-                        <div className="trainer-single wow fadeInUp mb-30" data-wow-delay=".8s">
-                            <div className="trainer-image">
-                                <a href="team-details.html"><img src="assets/img/trainer/trainer-2.jpg" alt=""/></a>
-                            </div>
-                            <div className="trainer-info">
-                                <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                <p className="mb-20">Fitness Trainer</p>
-                                <div className="trainer-soicial-icon">
-                                    <a href="#"><i className="fab fa-facebook-f"/></a>
-                                    <a href="#"><i className="fab fa-twitter"/></a>
-                                    <a href="#"><i className="fab fa-instagram"/></a>
-                                    <a href="#"><i className="fab fa-google"/></a>
-                                </div>
-                            </div>
-                            <div className="trainer-btn">
-                                <a href="team-details.html" className="tp-btn-square"><i className="fal fa-chevron-double-right"/></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xxl-3 col-lg-4 col-md-6">
-                        <div className="trainer-single wow fadeInUp mb-30" data-wow-delay="1.2s">
-                            <div className="trainer-image">
-                                <a href="team-details.html"><img src="assets/img/trainer/trainer-3.jpg" alt=""/></a>
-                            </div>
-                            <div className="trainer-info">
-                                <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                <p className="mb-20">Fitness Trainer</p>
-                                <div className="trainer-soicial-icon">
-                                    <a href="#"><i className="fab fa-facebook-f"/></a>
-                                    <a href="#"><i className="fab fa-twitter"/></a>
-                                    <a href="#"><i className="fab fa-instagram"/></a>
-                                    <a href="#"><i className="fab fa-google"/></a>
-                                </div>
-                            </div>
-                            <div className="trainer-btn">
-                                <a href="team-details.html" className="tp-btn-square"><i className="fal fa-chevron-double-right"/></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-xxl-3 col-lg-4 col-md-6">
-                        <div className="trainer-single wow fadeInUp mb-30" data-wow-delay="1.4s">
-                            <div className="trainer-image">
-                                <a href="team-details.html"><img src="assets/img/trainer/trainer-4.jpg" alt=""/></a>
-                            </div>
-                            <div className="trainer-info">
-                                <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                <p className="mb-20">Fitness Trainer</p>
-                                <div className="trainer-soicial-icon">
-                                    <a href="#"><i className="fab fa-facebook-f"/></a>
-                                    <a href="#"><i className="fab fa-twitter"/></a>
-                                    <a href="#"><i className="fab fa-instagram"/></a>
-                                    <a href="#"><i className="fab fa-google"/></a>
-                                </div>
-                            </div>
-                            <div className="trainer-btn">
-                                <a href="team-details.html" className="tp-btn-square"><i className="fal fa-chevron-double-right"/></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div className="company-static-area" data-background="assets/img/bg/static-bg.jpg">
             <div className="container custome-container">
                 <div className="row justify-content-center align-items-center">
@@ -661,7 +554,7 @@ export default function Index() {
                     </div>
                     <div className="col-xl-5 col-lg-7 col-md-12">
                         <div className=" mb-30">
-                            <form action={"#"} className="calculate-form-wrapper">
+                            <form action={"/"} className="calculate-form-wrapper">
                                 <h3 className="tp-calculate-form-title mb-30">BMI Calculator</h3>
                                 <div className="input-field mb-15">
                                     <input type="text" onChange={(e) => setHeight(e.target.value)}name={height} placeholder="Height"/>
@@ -670,8 +563,10 @@ export default function Index() {
                                     <input type="text" onChange={(e) => setWeight(e.target.value)} name={weight} placeholder="Weight"/>
                                 </div>
                                 <div className="input-field">
-                                    <button type="submit" onClick={handleBmi} className="calculate-btn" > Calculate now <i
+
+                                        <button type="submit" onClick={resultbmi} className="calculate-btn" > Calculate now <i
                                         className="fal fa-chevron-double-right"/></button>
+
                                 </div>
                                 <h1>{bmi}</h1>
                                 <h2>{info}</h2>
@@ -748,7 +643,7 @@ export default function Index() {
                                             </ul>
                                         </div>
                                         <div className="price-btn text-center pb-30">
-                                            <a href="price.html" className="tp-btn-round servic_btn-active">join
+                                            <a href="/contact" className="tp-btn-round servic_btn-active">join
                                                 today <i className="fal fa-chevron-double-right"/></a>
                                         </div>
                                     </div>
@@ -774,7 +669,7 @@ export default function Index() {
                                             </ul>
                                         </div>
                                         <div className="price-btn text-center pb-30">
-                                            <a href="price.html" className="tp-btn-round">join today <i className="fal fa-chevron-double-right"></i></a>
+                                            <a href="/contact" className="tp-btn-round">join today <i className="fal fa-chevron-double-right"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -806,89 +701,7 @@ export default function Index() {
                             </div>
                         </div>
                         <div className="col-lg-6">
-                            <div className="shop_button text-lg-end"><a href="shop.html" className="tp-btn-round">All products <i className="fal fa-chevron-double-right"></i></a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div className="container custome-container mt-30">
-                <div className="row">
-                    <div className="col-lg-4 col-md-6">
-                        <div className="product-item mb-30 wow fadeInUp" data-wow-delay=".3s">
-                            <div className="prouct-wrapper">
-                                <div className="product_thum product_thum-new mb-30">
-                                    <div className="fix">
-                                        <a href="shop-details.html"><img src="store_2.jpg" className="img-fluid" alt="product-img"/></a>
-                                    </div>
-                                    <div className="sale-tag">
-                                        <span className="new">new</span>
-                                    </div>
-                                    <div className="product-item-action">
-                                        <a href="wishlist.html"><i className="far fa-heart"></i></a>
-                                        <a href="assets/img/product/product-1.jpg" className="image-popups"><i className="fas fa-compress"></i></a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <div className="product-info">
-                                        <h5 className="product_name"><a href="shop-details.html">Boxing Glove</a></h5>
-                                        <span className="product_price">$508.00</span>
-                                    </div>
-                                    <div className="product-button">
-                                        <a href="shop-details.html" className="tp-btn-round-product">buy now <i className="fal fa-chevron-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6">
-                        <div className="product-item mb-30 wow fadeInUp" data-wow-delay=".6s">
-                            <div className="prouct-wrapper">
-                                <div className="product_thum mb-30">
-                                    <div className="fix"><a href="shop-details.html"><img
-                                        src="assets/img/product/product-2.jpg" className="img-fluid" alt="product-img"/></a>
-                                    </div>
-                                    <div className="product-item-action">
-                                        <a href="wishlist.html"><i className="far fa-heart"></i></a>
-                                        <a href="assets/img/product/product-2.jpg" className="image-popups"><i className="fas fa-compress"></i></a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <div className="product-info">
-                                        <h5 className="product_name"><a href="shop-details.html">Fitness Grip</a></h5>
-                                        <span className="product_price">$408.00</span>
-                                    </div>
-                                    <div className="product-button">
-                                        <a href="shop-details.html" className="tp-btn-round-product">buy now <i className="fal fa-chevron-double-right"/></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4 col-md-6">
-                        <div className="product-item mb-30 wow fadeInUp" data-wow-delay=".9s">
-                            <div className="prouct-wrapper">
-                                <div className="product_thum product_thum-new mb-30">
-                                    <div className="fix">
-                                        <a href="shop-details.html"><img src="assets/img/product/product-3.jpg" className="img-fluid" alt="product-img"/></a>
-                                    </div>
-                                    <div className="sale-tag">
-                                        <span className="new">new</span>
-                                    </div>
-                                    <div className="product-item-action">
-                                        <a href="wishlist.html"><i className="far fa-heart"></i></a>
-                                        <a href="assets/img/product/product-3.jpg" className="image-popups"><i className="fas fa-compress"/></a>
-                                    </div>
-                                </div>
-                                <div className="product-content">
-                                    <div className="product-info">
-                                        <h5 className="product_name"><a href="shop-details.html">Hand Dumbell</a></h5>
-                                        <span className="product_price">$608.00</span>
-                                    </div>
-                                    <div className="product-button">
-                                        <a href="shop-details.html" className="tp-btn-round-product">buy now <i className="fal fa-chevron-double-right"/></a>
-                                    </div>
-                                </div>
-                            </div>
+                            <div className="shop_button text-lg-end"><a href="/shop" className="tp-btn-round">All products <i className="fal fa-chevron-double-right"></i></a></div>
                         </div>
                     </div>
                 </div>

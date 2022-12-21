@@ -4,3 +4,7 @@ footer{
 .footer__info-text{
     padding-top: 10px;
 }
+.footer_text{
+    font-size: 29px;
+    font-family: "Teko", sans-serif;
+}

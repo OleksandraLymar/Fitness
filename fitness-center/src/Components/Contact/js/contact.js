@@ -2,7 +2,7 @@
 import "../css/style.css"
 import emailjs from '@emailjs/browser';
 import {useRef} from "react";
-
+import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet'
 export default function Contact() {
 
     const form = useRef();
@@ -18,6 +18,14 @@ export default function Contact() {
                 console.log(error.text);
             });
     };
+
+    const position = [52.461006, 13.325050]
+    const position_second =[52.514847, 13.465922]
+    const position_Kassel =[51.311971, 9.472164]
+    const position_Frankfurt =[50.114730, 8.681191]
+    const position_Dusseldorf =[51.225910, 6.781468
+
+    ]
 
     return (
         <section className="about-section text-center" id="contact">
@@ -41,9 +49,49 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+
                 <div className="tp-map-area pb-110">
                     <div className="tp-contact-map">
 
+                        <div className={"map"}>
+                            <div className="section-wrap mb-35 block1_text_map">
+                                <span className="tpsub-title mb-15">Our geolocation</span>
+                                <h3 className="section-title mb-20">Our halls are located throughout Germany</h3>
+                                <span className="section-border mb-30"><i className="far fa-circle"></i></span>
+                            </div>
+                        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
+                            <TileLayer
+                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={position}>
+                                <Popup>
+                                    Fitness First
+                                </Popup>
+                            </Marker>
+                            <Marker position={position_second}>
+                                <Popup>
+                                    Fitness First
+                                </Popup>
+                            </Marker>
+                            <Marker position={position_Kassel}>
+                                <Popup>
+                                    Fitness First
+                                </Popup>
+                            </Marker>
+                            <Marker position={position_Frankfurt}>
+                                <Popup>
+                                    Fitness First
+                                </Popup>
+                            </Marker>
+
+                            <Marker position={position_Dusseldorf}>
+                                <Popup>
+                                    Fitness First
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
+                        </div>
                     </div>
                 </div>
                 <div className="conatct_dinfo">

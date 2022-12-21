@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom";
 
-export default function About() {
+export default function Header() {
 
     return (
         <section className="about-section text-center" id="about">
@@ -21,7 +21,7 @@ export default function About() {
                         <div className="row align-items-center">
                             <div className="col-xxl-7 col-xl-5 col-lg-4 col-md-3">
                                 <div className="top-logo">
-                                    <a href="index.html"><img src="assets/img/logo/logo.png" alt=""/></a>
+                                    <a href="/"><img src="assets/img/logo/logo.png" alt=""/></a>
                                 </div>
                             </div>
                             <div className="col-xxl-5 col-xl-7 col-lg-8 col-md-9">
@@ -59,8 +59,8 @@ export default function About() {
                             <div className="col-xxl-12 col-xl-12 col-lg-12">
                                 <div className="topcontact-btn f-right d-none d-lg-block">
                                     <div className="contact-btn">
-                                        <a href="contact.html" className="top-btn">Contact Us <i
-                                            className="fal fa-chevron-double-right"></i></a>
+                                        <Link to="/contact" className="top-btn">Contact Us <i
+                                            className="fal fa-chevron-double-right"></i></Link>
                                     </div>
                                 </div>
                                 <div className="menu-content">
@@ -72,38 +72,15 @@ export default function About() {
                                             <ul>
                                                 <li><Link to="/">Home </Link></li>
                                                 <li><Link to="/about">About </Link></li>
-                                                <li><Link to="/about">Pages<i className="fal fa-plus dropdown-icon"></i></Link>
-                                                    <ul className="sub-menu">
-                                                        <li><Link to="/classes">Classes</Link></li>
-                                                        <li><Link to="/team">Team</Link></li>
-                                                        <li><Link to="/price">Pricing Plan</Link></li>
-                                                        <li><Link to="/cart">Cart</Link></li>
-                                                        <li><Link to="/checkout">Checkout</Link></li>
-                                                        <li><Link to="/wishlist">Wishlist</Link></li>
-                                                    </ul>
-                                                </li>
-                                                <li><Link to="/shop">Shop </Link>
-                                                </li>
-                                                <li><Link to="/protfolio">Portfolio</Link>
-
-                                                </li>
-                                                <li><Link to="/blog">Blog</Link>
-                                                </li>
+                                                <li><Link to="/team">Team </Link></li>
+                                                <li><Link to="/shop">Shop </Link></li>
+                                                <li><Link to="/price">Price</Link>                                                </li>
                                                 <li><Link to="/contact">Contact </Link></li>
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div className="side-menu-icon d-lg-none text-end">
-                                        <a href="javascript:void(0)"
-                                           className="info-toggle-btn f-right sidebar-toggle-btn"><i
-                                            className="fal fa-bars"></i></a>
-                                    </div>
                                     <div className="header-action-btn f-right d-none d-lg-block">
-                                        <a href="javascript:void(0)" data-bs-toggle="modal" className="search"
-                                           data-bs-target="#search-modal"><i className="far fa-search"></i></a>
-                                        <a href="cart.html"><i className="fas fa-shopping-basket"></i>
-                                            <span>0</span>
-                                        </a>
+                                        <Link to="/cart"> <i className="fas fa-shopping-basket"/> </Link>
                                     </div>
                                 </div>
                             </div>
@@ -120,7 +97,7 @@ export default function About() {
                     </div>
                     <div className="sidebar__content">
                         <div className="sidebar__logo mb-40">
-                            <a href="index.html">
+                            <a href="/">
                                 <img src="assets/img/logo/logo.png" alt="logo"/>
                             </a>
                         </div>

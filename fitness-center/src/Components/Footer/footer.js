@@ -1,5 +1,69 @@
 import "./styles.css"
-export default function Footer() {
+import React from "react"
+class Footer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            isNameValid: true,
+            inpNameClass: 'form-control',
+            email: '',
+            isEmailValid: true,
+            phone: '',
+            isPhoneValid: true,
+            message: '',
+            isMessageValid: true,
+            isFormValid: false,
+            btnSubmitClass: 'btn btn-primary text-uppercase disabled'
+        }
+        this.onChange= this.onChange.bind(this) // Разрешить методу доступ к классу
+    }
+
+    onChange(e){
+        const oldState = this.state
+        oldState[e.target.name] = e.target.value
+        this.setState(oldState)
+        this.validateForm()
+    }
+    send(){
+        // console.log('send')
+        let data = {
+            phone: this.state.phone
+        }
+
+        fetch('http://localhost:3334/api/contacts',{
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => {
+                console.log(res)
+                return res.json()
+            })
+            .then(data=> {
+                console.log(data)
+            })
+            .catch(err=> {
+                console.log("Error")
+                console.log(err)
+            })
+    }
+
+    validateForm(){
+        const oldState = this.state
+        if(oldState.isPhoneValid ) {
+            oldState.isFormValid = true
+            oldState.btnSubmitClass = 'btn btn-primary text-uppercase'
+        } else {
+            oldState.isFormValid = false
+            oldState.btnSubmitClass = 'btn btn-primary text-uppercase disabled'
+        }
+        this.setState(oldState);
+    }
+
+    render(){
     return (
         <section className="about-section text-center" id="footer">
         <footer>
@@ -9,16 +73,16 @@ export default function Footer() {
                 <div className="news-letter-area pt-100 pb-20">
                     <div className="row align-items-center">
                         <div className="col-lg-5">
-                            <h5 className="news-letter-title mb-30">Subscribe</h5>
+                            <p className="news-letter-title mb-30 footer_text">Do you have any questions? Write your phone number and we will call you back!</p>
                         </div>
                         <div className="col-lg-7">
-                            <form action="#">
+                            <form action="/"  id="contactForm">
                                 <div className="news_letter-info">
                                     <div className="news_letter_search mb-30">
-                                        <input type="text" placeholder="Email Address |"/>
+                                        <input onChange={this.onChange}  name="phone" className="form-control" id="phone" type="tel" placeholder="Phone Number |"/>
                                     </div>
                                     <div className="subscrive-button mb-30">
-                                        <button type="submit" className="tp-btn-round-newsletter">Subscribe now <i
+                                        <button onClick={this.send.bind(this)} disabled={!this.state.isFormValid} className={this.state.btnSubmitClass} id="submitButton" type="button" className="tp-btn-round-newsletter">Sent <i
                                             className="fal fa-chevron-double-right"/></button>
                                     </div>
                                 </div>
@@ -34,7 +98,7 @@ export default function Footer() {
                     <div className="col-lg-6 col-md-6 col-sm-6">
                         <div className="footer-widget fotter-col2 wow fadeInUp mb-40" data-wow-delay=".3s">
                             <div className="footer-logo mb-25">
-                                <a href="index.html"> <img src="assets/img/logo/logo.png" alt=""/> </a>
+                                <a href="/"> <img src="assets/img/logo/logo.png" alt=""/> </a>
                             </div>
                             <p className="pb-30">Consequat lacinia into gravida nisie facils porto lorem ultricies
                                 vivamus maecenas one iaculis</p>
@@ -96,4 +160,6 @@ export default function Footer() {
         </footer>
         </section>
     )
-}
+}}
+
+export default Footer

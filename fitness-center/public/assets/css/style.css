@@ -231,6 +231,7 @@ textarea:focus {
 -----------------------------------------*/
 .fix {
   overflow: hidden;
+
 }
 
 .clear {
@@ -2804,7 +2805,6 @@ textarea:focus {
   background: #ffffff;
   margin-left: 7%;
   position: relative;
-  margin-top: -250px;
 }
 @media (max-width: 575px) {
   .tpcounter-area {
@@ -3700,7 +3700,10 @@ textarea:focus {
   overflow: hidden;
 }
 
-.trainer-image img {
+.trainer-image{
+  height: 400px;
+}
+.trainer-image:hover  {
   border-radius: 3px;
   border-top-left-radius: 25%;
   border-bottom-right-radius: 25%;

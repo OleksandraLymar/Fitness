@@ -7,3 +7,13 @@
 .markercluster-map {
     height: 20vh;
 }
+.leaflet-container, .block1_text_map{
+    width: 50%;
+    height: 285px;
+    margin: 0 auto;
+    z-index: 0;
+
+}
+.block1_text_map {
+    margin-top: 94px;
+}

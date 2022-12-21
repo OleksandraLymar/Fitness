@@ -1,23 +1,19 @@
+import "./style/styles.css"
+import {Link} from "react-router-dom";
 export default function About() {
     return (
         <section className="about-section text-center" id="/about">
             <body>
-            {/*<div id="preloader">*/}
-            {/*    <div className="preloader">*/}
-            {/*        <span></span>*/}
-            {/*        <span></span>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
+
             <div className="progress-wrap">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                     <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
                 </svg>
             </div>
-            <div className="sidebar__area">
-            <div className="body-overlay"></div>
-                <div className="page__title align-items-center">
+            <main>
+                <div className="page__title align-items-center main_bg">
                     <div className="container">
-                        <div className="row">
+                        <div className="row ">
                             <div className="col-xl-12">
                                 <div className="page__title-content text-center">
                                     <h3 className="breadcrumb-title breadcrumb-title-sd mb-15">About Us</h3>
@@ -26,10 +22,7 @@ export default function About() {
                                             <nav className="breadcrumb-trail breadcrumbs">
                                                 <ul className="breadcrumb-menu">
                                                     <li className="breadcrumb-trail">
-                                                        <a href="index.html"><span>Home</span></a>
-                                                    </li>
-                                                    <li className="trail-item">
-                                                        <span>About</span>
+                                                        <Link to="/"><span>Home</span></Link>
                                                     </li>
                                                 </ul>
                                             </nav>
@@ -43,55 +36,26 @@ export default function About() {
                 <div className="tp-about-area pt-120 pb-95">
                     <div className="container">
                         <div className="row">
-                            <div className="col-xl-5 col-lg-6">
-                                <div className="about-image mb-30 wow fadeInUp" data-wow-delay=".4s">
-                                    <img src="assets/img/about/about-1.jpg" alt="" className="img-fluid"/>
-                                        <div className="about-shape">
-                                            <img src="assets/img/about/about-shape.png" alt=""/>
-                                                <div className="content">
-                                                    <h4>25 + Year</h4>
-                                                    <span>Work Experience</span>
-                                                </div>
-                                        </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-7 col-lg-6 ">
-                                <div className="about-info wow fadeInUp" data-wow-delay=".7s">
-                                    <div className="section-wrap">
-                                        <span className="tpsub-title mb-15">About us</span>
-                                        <h3 className="section-title mb-20">Make yourself stronger than
-                                            your best excuses</h3>
-                                        <span className="section-border mb-20"><i className="far fa-circle"></i></span>
-                                        <p className="section-description mb-40">Duis nunc sodales conubia a laoreet
-                                            aliquet on nostra eleifend lacinia prasent hendrerit quisque penatibus erat
-                                            a pulvina integer semper ridiculus lectus con dimentum obor tise verodar
-                                            capmtaso morin</p>
+                            <div className="about-info wow fadeInUp" data-wow-delay=".7s">
+                                <div className="section-wrap">
+                                    <span className="tpsub-title mb-15">About us</span>
+                                    <h3 className="section-title mb-20">The best fitness club with 20 years of experience</h3>
+                                    <span className="section-border mb-20"><i className="far fa-circle"></i></span>
+                                    <p className="section-description mb-40">The network of halls of the best club is located in all parts of Germany! Equipped rooms with beauty and blue lighting give a boost of motivation for the entire workout. There are separate rooms for women and men, a separate after-workout visit to our spa and an invigorating drink in our "healthy drinks" bar.</p>
                                     </div>
                                     <blockquote className="ab-bquote">
-                           <span>Push harder than yesterday if you want on
-                              the different tomorrow.</span>
+                                        <span>Do you want to see results in a year? Start now! We are waiting for you at our club! Become a member now and get a 10% discount</span>
                                         <div className="quote">
                                             <img src="assets/img/about/quote.png" alt=""/>
                                         </div>
                                     </blockquote>
-                                    <div className="author-info">
-                                        <div className="author-data">
-                                            <div className="author_img mb-30"><a href="#"><img
-                                                src="assets/img/about/author.jpg" alt=""/></a></div>
-                                            <div className="author-degination mb-30">
-                                                <h4>Mark Hander</h4>
-                                                <span>CEO - Fetoxe</span>
-                                            </div>
-                                        </div>
-                                        <div className="about_play mb-25">
-                                            <a className="video-play-button ab-play_btn hero-play popup-video"
-                                               href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
+                                    <div className="about_play mb-25">
+                                            <Link className="video-play-button ab-play_btn hero-play popup-video"
+                                               to="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
                                                 <i className="fas fa-play"></i>
-                                            </a>
+                                            </Link>
                                             <span>Intro Video</span>
-                                        </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +63,7 @@ export default function About() {
                         <img src="assets/img/about/about-bg-png.png" alt="" className="img-fluid"/>
                     </div>
                 </div>
-                <div className="services-list mt-100" data-background="assets/img/services/services-bg.jpg">
+                <div className="services-list mt-100" >
                     <div className="container custome-container">
                         <div className="section-wrap-two text-center wow fadeInUp" data-wow-delay=".2s">
                             <span className="tpsub-title-two mb-15"><i className="far fa-circle"></i>Our services<i
@@ -116,10 +80,8 @@ export default function About() {
                                             <i className="flaticon-dumbbell"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Visit the
-                                        Fitoxe</a></h4>
-                                    <p className="mb-25">Duis nunc sodales conubia laoreet aliquet on nostra eleifend
-                                        lacinia </p>
+                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Weight Lifting</a></h4>
+                                    <p className="mb-25">Large selection of trainers and fixtures</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -130,10 +92,8 @@ export default function About() {
                                             <i className="flaticon-customer"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Discuss
-                                        Service</a></h4>
-                                    <p className="mb-25">Nibh augue dignissim volutp duisen ever corner. Malesuada
-                                        rutrum</p>
+                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Power Yoga</a></h4>
+                                    <p className="mb-25">Develops the flexibility of your body</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -144,10 +104,8 @@ export default function About() {
                                             <i className="flaticon-lawn-mower"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Choose
-                                        Plan</a></h4>
-                                    <p className="mb-25">Volutp duisen evermale suadalibero ornare ultrices nibh
-                                        augue</p>
+                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Crosfit Tools</a></h4>
+                                    <p className="mb-25">We provide the best tools and training</p>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-6 col-sm-6">
@@ -158,10 +116,8 @@ export default function About() {
                                             <i className="flaticon-muscle"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Get
-                                        Fitness</a></h4>
-                                    <p className="mb-25">Ultrices nibh augue, Malesuada rutrum libero ornare
-                                        dignissim</p>
+                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Body Building</a></h4>
+                                    <p className="mb-25">We create your personal training and nutrition plan</p>
                                 </div>
                             </div>
                         </div>
@@ -240,16 +196,9 @@ export default function About() {
                         <div className="row justify-content-center align-items-center">
                             <div className="col-xl-7 col-lg-8">
                                 <div className="section-wrap section-wrap-s wow fadeInUp" data-wow-delay=".2s">
-                                    <span className="tpsub-title mb-15">Best Trainer</span>
-                                    <h3 className="section-title mb-20">Dedicated and qualified trainer ready to
-                                        supporting</h3>
+                                    <span className="tpsub-title mb-15">Best Trainers</span>
+                                    <h3 className="section-title mb-20">Our top three coaches!</h3>
                                     <span className="section-border mb-30"><i className="far fa-circle"></i></span>
-                                </div>
-                            </div>
-                            <div className="col-xl-5 col-lg-4">
-                                <div className="trainer-more text-lg-end">
-                                    <a href="team.html" className="tp-btn-round wow fadeInUp" data-wow-delay=".7s">What
-                                        do we do <i className="fal fa-chevron-double-right"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -275,7 +224,6 @@ export default function About() {
                                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                                             <a href="#"><i className="fab fa-twitter"></i></a>
                                             <a href="#"><i className="fab fa-instagram"></i></a>
-                                            <a href="#"><i className="fab fa-google"></i></a>
                                         </div>
                                     </div>
                                     <div className="trainer-btn">
@@ -297,7 +245,6 @@ export default function About() {
                                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                                             <a href="#"><i className="fab fa-twitter"></i></a>
                                             <a href="#"><i className="fab fa-instagram"></i></a>
-                                            <a href="#"><i className="fab fa-google"></i></a>
                                         </div>
                                     </div>
                                     <div className="trainer-btn">
@@ -319,29 +266,6 @@ export default function About() {
                                             <a href="#"><i className="fab fa-facebook-f"></i></a>
                                             <a href="#"><i className="fab fa-twitter"></i></a>
                                             <a href="#"><i className="fab fa-instagram"></i></a>
-                                            <a href="#"><i className="fab fa-google"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trainer-btn">
-                                        <a href="team-details.html" className="tp-btn-square"><i
-                                            className="fal fa-chevron-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-lg-4 col-md-6">
-                                <div className="trainer-single wow fadeInUp mb-30" data-wow-delay="2s">
-                                    <div className="trainer-image">
-                                        <a href="team-details.html"><img src="assets/img/trainer/trainer-4.jpg"
-                                                                         alt="trainer-img"/></a>
-                                    </div>
-                                    <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                        <p className="mb-20">Fitness Trainer</p>
-                                        <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
-                                            <a href="#"><i className="fab fa-google"></i></a>
                                         </div>
                                     </div>
                                     <div className="trainer-btn">
@@ -358,10 +282,9 @@ export default function About() {
                         <div className="row justify-content-center">
                             <div className="col-lg-12">
                                 <div className="section-wrap-two text-center">
-                                    <span className="tpsub-title-two mb-15"><i className="far fa-circle"></i>recent article<i
-                                        className="far fa-circle"></i></span>
-                                    <h3 className="section-title-two  mb-30">Every single update and story from our
-                                        journal</h3>
+                                    <span className="tpsub-title-two mb-15"><i className="far fa-circle"/>The creator<i
+                                        className="far fa-circle"/></span>
+
                                 </div>
                             </div>
                         </div>
@@ -377,31 +300,20 @@ export default function About() {
                                         <div className="bolg_slider_item swiper-slide">
                                             <div className="row g-0">
                                                 <div className="col-lg-6">
-                                                    <div className="blog-image">
-                                                        <a href="blog-details.html"><img
-                                                            src="assets/img/blog/blog-1.jpg" className="img-fluid"
-                                                            alt="blog-img"/></a>
-                                                    </div>
+                                                    <div className="blog-image"/>
                                                 </div>
                                                 <div className="col-lg-6">
                                                     <div className="blog_content mt-85"
                                                          data-background="assets/img/blog/blog-bg.jpg">
                                                         <div className="blog-info">
                                                             <div className="blog__meta mb-15">
-                                                                <span><a href="#"><i className="far fa-bookmark"></i>Fitness Workout</a></span>
-                                                                <span><a href="#"><i className="far fa-comments"></i> 02 Comment</a></span>
+                                                                <span><i className="far fa-bookmark"></i>Creator of a network of fitness clubs</span>
                                                             </div>
                                                             <h5 className="blog_title mb-20"><a
-                                                                href="blog-details.html">Risus purus namien parturient
-                                                                accumsan cacus pulvinar magna.</a></h5>
-                                                            <p className="mb-40">Tincidunt litora eget pulvinar
-                                                                fringilla rhoncus cuirae tristique, tortor orci Etiam
-                                                                auctor torquent vel tortor porta class natoque est
-                                                                luctus at rutrum ipsum porttitor viverra in curabitur
-                                                                conubia non vivamus hymenaeos enim suscipit.</p>
+                                                                href="blog-details.html">David Markian</a></h5>
+                                                            <p className="mb-40">I am the creator of a network of fitness clubs throughout Germany! I can say with confidence that our customers will be satisfied with the service, the quality of training and gyms! Have time to relax in the spa and visit the pool. For regular customers we have bonuses. Welcome to us! With us, your figure will be perfect!</p>
                                                             <div className="blog-button">
-                                                                <a href="blog-details.html" className="tp-btn-round">Read
-                                                                    More <i className="fal fa-chevron-double-right"></i></a>
+                                                                <Link to="/contact" className="tp-btn-round">Have question? <i className="fal fa-chevron-double-right"></i></Link>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -452,7 +364,8 @@ export default function About() {
                                                     </div>
                                                 </div>
                                                 <div className="col-lg-6">
-                                                    <div className="blog_content mt-85">
+                                                    <div className="blog_content mt-85"
+                                                         data-background="assets/img/blog/blog-bg.jpg">
                                                         <div className="blog-info">
                                                             <div className="blog__meta mb-15">
                                                                 <span><a href="#"><i className="far fa-bookmark"></i>Fitness Workout</a></span>
@@ -478,16 +391,14 @@ export default function About() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="swiper-button-prev bs-button bs-button-prev"><i
-                                    className="far fa-long-arrow-left"></i></div>
-                                <div className="swiper-button-next bs-button bs-button-next"><i
-                                    className="far fa-long-arrow-right"></i></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            </body>
-        </section>
+
+            </main>
+                    </body>
+
+            </section>
     )
 }

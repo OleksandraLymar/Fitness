@@ -1,0 +1,19 @@
+.main_bg{
+    background-image: url("../main_bg.jpg");
+}
+.about-info{
+    margin: 0 auto;
+}
+.author_img{
+    width: 60px;
+    height: 60px;
+}
+.services-list{
+    background-image: url("../img/bg_second.jpg");
+    height: 700px
+}
+.blog-image{
+    background-image: url("../img/david.jpg");
+    height: 600px;
+    width: 500px;
+}
