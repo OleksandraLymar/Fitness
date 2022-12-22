@@ -1,11 +1,11 @@
 import "./css/style.css"
 import { useEffect, useState } from "react";
-import { Products } from "./products.js";
+import { products } from "./products.js";
 import React from "react"
-
+import "./main.js"
 export default function Shop() {
+
     const [query, setQuery] = useState("");
-    const [product,setUser] = useState({})
     return (
         <section className="about-section text-center" id="shop">
             <body>
@@ -96,7 +96,7 @@ export default function Shop() {
                             <div className="col-lg-8">
                                 <div className="product">
                                     <div className="row list">
-                                        {Products.filter((asd) =>
+                                        {products.filter((asd) =>
                                             asd.name.toLowerCase().includes(query)
                                         ).map((product) => (
                                         <div className="col-lg-6 col-md-6 listItem" key={product.id}>
@@ -104,7 +104,7 @@ export default function Shop() {
                                             <div className="product-item mb-40">
                                                 <div className="prouct-wrapper">
                                                     <div className="product_thum product_thum-new mb-30">
-                                                        <div className="fix image-out"><img src={ product.img
+                                                        <div className="fix image-out "><img class="shop-item-image" src={ product.img
                                                         } height="300"/></div>
                                                         <div className="product-item-action">
                                                             <a href="#"><i className="far fa-shopping-basket"/></a>
@@ -113,11 +113,11 @@ export default function Shop() {
                                                     </div>
                                                     <div className="product-content">
                                                         <div className="product-info">
-                                                            <h5 className="product_name">{product.name}</h5>
-                                                            <span className="product_price">{product.price}</span>
+                                                            <h5 className="product_name shop-item-title">{product.name}</h5>
+                                                            <span className="product_price shop-item-price">{product.price}$</span>
                                                         </div>
                                                         <div className="product-button">
-                                                            <a href="#" className="tp-btn-round-product">buy now <i className="fal fa-chevron-double-right"/></a>
+                                                            <a href="#" className="add-cart tp-btn-round-product shop-item-button">buy now <i className="fal fa-chevron-double-right"/></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -125,6 +125,82 @@ export default function Shop() {
 
                                         </div>
                                         ))}
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="cart-area pt-120 pb-110">
+                                <div className="container">
+                                    <div className="row">
+                                        <div className="col-12">
+                                            <form action="#">
+                                                <div className="table-content table-responsive">
+                                                    <table className="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th className="product-thumbnail">Images</th>
+                                                            <th className="cart-product-name">Product</th>
+                                                            <th className="product-price">Unit Price</th>
+                                                            <th className="product-quantity">Quantity</th>
+                                                            <th className="product-subtotal">Total</th>
+                                                            <th className="product-remove">Remove</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        <tr>
+                                                            <td className="product-thumbnail"><a href="shop-details.html"><img
+                                                                src="#" alt=""/></a></td>
+                                                            <td className="product-name"> </td>
+                                                            <td className="product-price"><span className="amount"> </span>
+                                                            </td>
+                                                            <td className="product-quantity">
+                                                                <div className="cart-plus-minus cdcart-plus-minus"><input
+                                                                    type="text" value="1"/>
+                                                                    <div className="dec qtybutton">-</div>
+                                                                    <div className="inc qtybutton">+</div></div>
+                                                            </td>
+                                                            <td className="product-subtotal"><span className="amount"> </span>
+                                                            </td>
+                                                            <td className="product-remove "><i
+                                                                className="fa fa-times"></i></td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div className="row">
+                                                    <div className="col-12">
+                                                        <div className="coupon-all">
+                                                            <div className="coupon">
+                                                                <input id="coupon_code" className="input-text" name="coupon_code"
+                                                                       value="" placeholder="Coupon code" type="text"/>
+                                                                <button className="tp-btn-square-lg" name="apply_coupon"
+                                                                        type="submit">Apply
+                                                                    coupon
+                                                                </button>
+                                                            </div>
+                                                            <div className="coupon2">
+                                                                <button className="tp-btn-square-lg" name="update_cart"
+                                                                        type="submit">Update cart
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="row justify-content-end">
+                                                    <div className="col-md-5">
+                                                        <div className="cart-page-total">
+                                                            <h2>Cart total</h2>
+                                                            <ul className="mb-20">
+                                                                <li>Subtotal <span>$250.00</span></li>
+                                                                <li>Total <span>$250.00</span></li>
+                                                            </ul>
+                                                            <div className="checkout_btn f-right">
+                                                                <a className="tp-btn-square-lg" href="checkout.html"> checkout</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

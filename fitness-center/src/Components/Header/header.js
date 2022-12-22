@@ -79,8 +79,10 @@ export default function Header() {
                                             </ul>
                                         </nav>
                                     </div>
-                                    <div className="header-action-btn f-right d-none d-lg-block">
-                                        <Link to="/cart"> <i className="fas fa-shopping-basket"/> </Link>
+                                    <div className="header-action-btn f-right d-none d-lg-block cart">
+                                        <Link to=""> <i className="fas fa-shopping-basket"/>
+                                         <span>0</span>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>

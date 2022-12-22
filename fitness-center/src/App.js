@@ -26,6 +26,7 @@ function App() {
                    <Route path="/contact" element={<Contact/>} />
                    <Route path="/bmiResult" element={<BmiResult/>} />
                    <Route path="/cart" element={<Cart/>} />
+
               </Routes>
             <Footer/>
     </BrowserRouter>
