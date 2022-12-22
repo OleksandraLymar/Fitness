@@ -9,6 +9,7 @@ import Header from "./Components/Header/header.js";
 import Footer from "./Components/Footer/footer.js";
 import BmiResult from "./Components/Index/bmiResult/bmiResult.js";
 import Cart from "./Components/Cart/cart.js";
+import Checkout from "./Components/Checkout/checkout.js";
 // import Error404 from "./Components/Error/error.js
 
 
@@ -26,6 +27,7 @@ function App() {
                    <Route path="/contact" element={<Contact/>} />
                    <Route path="/bmiResult" element={<BmiResult/>} />
                    <Route path="/cart" element={<Cart/>} />
+                  <Route path="/checkout" element={<Checkout/>} />
 
               </Routes>
             <Footer/>

@@ -2,7 +2,7 @@ export const products = [
   {
     "id": 1,
     "name": "Training fitness gum",
-    "tag":"Trainingfitnessgum",
+    "className":"Trainingfitnessgum box",
     "price": 15,
     "department": "Cardio",
     "img":"./img/gum_one.png",
@@ -11,7 +11,7 @@ export const products = [
   {
     "id": 2,
     "name": "Training fitness gum",
-    "tag":"Trainingfitnessgum",
+    "className":"Trainingfitnessgum box",
     "price": 25,
     "department": "Cardio",
     "img":"./img/gum_two.png",
@@ -20,7 +20,7 @@ export const products = [
   {
     "id": 3,
     "name": "Training fitness gum",
-    "tag":"Trainingfitnessgum",
+    "className":"Trainingfitnessgum box",
     "price": 23,
     "department": "Cardio",
     "img":"./img/gum_three.png",
@@ -29,7 +29,7 @@ export const products = [
   {
     "id": 4,
     "name": "Fat burner",
-    "tag":"Fatburner",
+    "className":"Fatburner box",
     "price": 30,
     "department": "Fat burners",
     "img":"./img/fatburner_one.png",
@@ -38,7 +38,7 @@ export const products = [
   {
     "id": 5,
     "name": "Fat burner",
-    "tag":"Fatburner",
+    "className":"Fatburner box",
     "price": 35,
     "department": "Fat burners",
     "img":"./img/fatburner_two.png",
@@ -47,7 +47,7 @@ export const products = [
   {
     "id": 6,
     "name": "Fat burner",
-    "tag":"Fatburner",
+    "className":"Fatburner box",
     "price": 28,
     "department": "Fat burners",
     "img":"./img/fatburner_three.png",
@@ -56,7 +56,7 @@ export const products = [
   {
     "id": 7,
     "name": "Gloves for fitness",
-    "tag":"Glovesforfitness",
+    "className":"Glovesforfitness box",
     "price": 7,
     "department": "Gloves",
     "img":"./img/gloves_one.png",
@@ -65,7 +65,7 @@ export const products = [
   {
     "id": 8,
     "name": "Gloves for fitness",
-    "tag":"Glovesforfitness",
+    "className":"Glovesforfitness box",
     "price": 15,
     "department": "Gloves",
     "img":"./img/gloves_two.png",
@@ -74,7 +74,7 @@ export const products = [
   {
     "id": 9,
     "name": "Gloves for fitness",
-    "tag":"Glovesforfitness",
+    "className":"Glovesforfitness box",
     "price": 9,
     "department": "Gloves",
     "img":"./img/gloves_three.png",
@@ -83,7 +83,7 @@ export const products = [
   {
     "id": 10,
     "name": "Bottle for water",
-    "tag":"Bottleforwater",
+    "className":"Bottleforwater box",
     "price": 8,
     "department": "Bottles",
     "img":"./img/bottle_one.jpg",
@@ -92,7 +92,7 @@ export const products = [
   {
     "id": 11,
     "name": "Bottle for water",
-    "tag":"Bottleforwater",
+    "className":"Bottleforwater box",
     "price": 18,
     "department": "Bottles",
     "img":"./img/bottle_two.png",
@@ -101,7 +101,7 @@ export const products = [
   {
     "id": 12,
     "name": "Bottle for water",
-    "tag":"Bottleforwater",
+    "className":"Bottleforwater box",
     "price": 10,
     "department": "Bottles",
     "img":"./img/bottle_three.jpg",
@@ -110,7 +110,7 @@ export const products = [
   {
     "id": 13,
     "name": "Protein",
-    "tag":"Protein",
+    "className":"Protein box",
     "price": 20,
     "department": "Proteins",
     "img":"./img/protein_one.png",
@@ -119,7 +119,7 @@ export const products = [
   {
     "id": 14,
     "name": "Protein",
-    "tag":"Protein",
+    "className":"Protein box",
     "price": 18,
     "department": "Proteins",
     "img":"./img/protein_two.png",
@@ -128,7 +128,7 @@ export const products = [
   {
     "id": 15,
     "name": "Protein",
-    "tag":"Protein",
+    "className":"Protein box",
     "price": 27,
     "department": "Proteins",
     "img":"./img/protein_three.png",
@@ -137,7 +137,7 @@ export const products = [
   {
     "id": 16,
     "name": "Sport bag",
-    "tag":"Sportbag",
+    "className":"Sportbag box",
     "price": 40,
     "department": "Sports bags",
     "img":"./img/bag_one.jpg",
@@ -146,7 +146,7 @@ export const products = [
   {
     "id": 17,
     "name": "Sport bag",
-    "tag":"Sportbag",
+    "className":"Sportbag box",
     "price": 37,
     "department": "Sports bags",
     "img":"./img/bag_two.png",
@@ -155,7 +155,7 @@ export const products = [
   {
     "id": 18,
     "name": "Sport bag",
-    "tag":"Sportbag",
+    "className":"Sportbag box",
     "price": 34,
     "department": "Sports bags",
     "img":"./img/bag_three.png",
@@ -164,7 +164,7 @@ export const products = [
   {
     "id": 19,
     "name": "Bandage",
-    "tag":"Bandage",
+    "className":"Bandage box",
     "price": 6,
     "department": "Bandages",
     "img":"./img/bandeges_one.png",
@@ -173,7 +173,7 @@ export const products = [
   {
     "id": 20,
     "name": "Bandage",
-    "tag":"Bandage",
+    "className":"Bandage box",
     "price": 9,
     "department": "Bandages",
     "img": "./img/bandeges_two.png",
@@ -182,7 +182,7 @@ export const products = [
   {
     "id": 21,
     "name": "Bandage",
-    "tag":"Bandage",
+    "className":"Bandage box",
     "price": 3,
     "department": "Bandages",
     "img":"./img/bandeges_three.png",

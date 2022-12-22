@@ -17,17 +17,6 @@ export default function About() {
                             <div className="col-xl-12">
                                 <div className="page__title-content text-center">
                                     <h3 className="breadcrumb-title breadcrumb-title-sd mb-15">About Us</h3>
-                                    <div className="page_title__bread-crumb">
-                                        <nav>
-                                            <nav className="breadcrumb-trail breadcrumbs">
-                                                <ul className="breadcrumb-menu">
-                                                    <li className="breadcrumb-trail">
-                                                        <Link to="/"><span>Home</span></Link>
-                                                    </li>
-                                                </ul>
-                                            </nav>
-                                        </nav>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -185,92 +174,6 @@ export default function About() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="trainer-area pt-145 pb-35">
-                    <div className="container  custome-container">
-                        <div className="row justify-content-center align-items-center">
-                            <div className="col-xl-7 col-lg-8">
-                                <div className="section-wrap section-wrap-s wow fadeInUp" data-wow-delay=".2s">
-                                    <span className="tpsub-title mb-15">Best Trainers</span>
-                                    <h3 className="section-title mb-20">Our top three coaches!</h3>
-                                    <span className="section-border mb-30"><i className="far fa-circle"></i></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="fitnes-gallery-shape">
-                        <img src="assets/img/protfolio/gallery-shape.png" className="img-fluid" alt=""/>
-                    </div>
-                    <div className="fitnes-gallery-shape-2">
-                        <img src="assets/img/protfolio/gallery-shape-2.png" className="img-fluid" alt=""/>
-                    </div>
-                    <div className="container">
-                        <div className="row mt-35">
-                            <div className="col-xxl-3 col-lg-4 col-md-6">
-                                <div className="trainer-single mb-30 wow fadeInUp" data-wow-delay="1s">
-                                    <div className="trainer-image">
-                                        <a href="team-details.html"><img src="assets/img/trainer/trainer-1.jpg"
-                                                                         alt="trainer-img"/></a>
-                                    </div>
-                                    <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                        <p className="mb-20">Fitness Trainer</p>
-                                        <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trainer-btn">
-                                        <a href="team-details.html" className="tp-btn-square"><i
-                                            className="fal fa-chevron-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-lg-4 col-md-6">
-                                <div className="trainer-single mb-30 wow fadeInUp" data-wow-delay="1.3s">
-                                    <div className="trainer-image">
-                                        <a href="team-details.html"><img src="assets/img/trainer/trainer-2.jpg"
-                                                                         alt="trainer-img"/></a>
-                                    </div>
-                                    <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                        <p className="mb-20">Fitness Trainer</p>
-                                        <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trainer-btn">
-                                        <a href="team-details.html" className="tp-btn-square"><i
-                                            className="fal fa-chevron-double-right"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xxl-3 col-lg-4 col-md-6">
-                                <div className="trainer-single wow fadeInUp mb-30" data-wow-delay="1.7s">
-                                    <div className="trainer-image">
-                                        <a href="team-details.html"><img src="assets/img/trainer/trainer-3.jpg"
-                                                                         alt="trainer-img"/></a>
-                                    </div>
-                                    <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Desert Antony</a></h5>
-                                        <p className="mb-20">Fitness Trainer</p>
-                                        <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-twitter"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
-                                        </div>
-                                    </div>
-                                    <div className="trainer-btn">
-                                        <a href="team-details.html" className="tp-btn-square"><i
-                                            className="fal fa-chevron-double-right"></i></a>
                                     </div>
                                 </div>
                             </div>

@@ -1,4 +1,5 @@
 import "./style.css"
+import {Link} from "react-router-dom";
 export default function Price() {
 
     return (
@@ -61,8 +62,8 @@ export default function Price() {
                                                     </ul>
                                                 </div>
                                                 <div className="price-btn text-center pb-30">
-                                                    <a href="price.html" className="tp-btn-round">join today <i
-                                                        className="fal fa-chevron-double-right"></i></a>
+                                                    <Link to="/contact" className="tp-btn-round">join today <i
+                                                        className="fal fa-chevron-double-right"></i></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,8 +93,8 @@ export default function Price() {
                                                     </ul>
                                                 </div>
                                                 <div className="price-btn text-center pb-30">
-                                                    <a href="price.html" className="tp-btn-round servic_btn-active">join
-                                                        today <i className="fal fa-chevron-double-right"></i></a>
+                                                    <Link to="/contact" className="tp-btn-round servic_btn-active">join
+                                                        today <i className="fal fa-chevron-double-right"></i></Link>
                                                 </div>
                                             </div>
                                         </div>
@@ -119,8 +120,8 @@ export default function Price() {
                                                     </ul>
                                                 </div>
                                                 <div className="price-btn text-center pb-30">
-                                                    <a href="price.html" className="tp-btn-round">join today <i
-                                                        className="fal fa-chevron-double-right"></i></a>
+                                                    <Link to="/contact" className="tp-btn-round">join today <i
+                                                        className="fal fa-chevron-double-right"></i></Link>
                                                 </div>
                                             </div>
                                         </div>

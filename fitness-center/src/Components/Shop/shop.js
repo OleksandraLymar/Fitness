@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { products } from "./products.js";
 import React from "react"
 import "./main.js"
+import "./filter.js"
 export default function Shop() {
 
     const [query, setQuery] = useState("");
@@ -51,23 +52,26 @@ export default function Shop() {
                                         <h5 className="classes_widget_title mb-25"><i
                                             className="far fa-circle"/> Category</h5>
                                         <ul className="product-catagory_list list">
-                                            <li>
-                                                Cardio Therapy
+                                            <li data-f={"all"}>
+                                                All
                                             </li>
-                                            <li>
-                                                Beauty & Spa
+                                            <li data-f={"Trainingfitnessgum"}>
+                                                Training fitness gum
                                             </li>
-                                            <li>
-                                                Free Hand Workout
+                                            <li data-f={"Fatburner"}>
+                                                Fat burner
                                             </li>
-                                            <li>
-                                                Muscle Building
+                                            <li data-f={"Glovesforfitness"}>
+                                                Gloves for fitness
                                             </li>
-                                            <li>
-                                                Body Supplement
+                                            <li data-f={"Bottleforwater"}>
+                                                Bottle for water
                                             </li>
-                                            <li>
-                                                Boxing & Fitness
+                                            <li data-f={"Protein"}>
+                                                Protein
+                                            </li>
+                                            <li data-f={"Sportbag"}>
+                                                Sport bag
                                             </li>
 
                                         </ul>
@@ -125,82 +129,6 @@ export default function Shop() {
 
                                         </div>
                                         ))}
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="cart-area pt-120 pb-110">
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <form action="#">
-                                                <div className="table-content table-responsive">
-                                                    <table className="table">
-                                                        <thead>
-                                                        <tr>
-                                                            <th className="product-thumbnail">Images</th>
-                                                            <th className="cart-product-name">Product</th>
-                                                            <th className="product-price">Unit Price</th>
-                                                            <th className="product-quantity">Quantity</th>
-                                                            <th className="product-subtotal">Total</th>
-                                                            <th className="product-remove">Remove</th>
-                                                        </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                        <tr>
-                                                            <td className="product-thumbnail"><a href="shop-details.html"><img
-                                                                src="#" alt=""/></a></td>
-                                                            <td className="product-name"> </td>
-                                                            <td className="product-price"><span className="amount"> </span>
-                                                            </td>
-                                                            <td className="product-quantity">
-                                                                <div className="cart-plus-minus cdcart-plus-minus"><input
-                                                                    type="text" value="1"/>
-                                                                    <div className="dec qtybutton">-</div>
-                                                                    <div className="inc qtybutton">+</div></div>
-                                                            </td>
-                                                            <td className="product-subtotal"><span className="amount"> </span>
-                                                            </td>
-                                                            <td className="product-remove "><i
-                                                                className="fa fa-times"></i></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                                <div className="row">
-                                                    <div className="col-12">
-                                                        <div className="coupon-all">
-                                                            <div className="coupon">
-                                                                <input id="coupon_code" className="input-text" name="coupon_code"
-                                                                       value="" placeholder="Coupon code" type="text"/>
-                                                                <button className="tp-btn-square-lg" name="apply_coupon"
-                                                                        type="submit">Apply
-                                                                    coupon
-                                                                </button>
-                                                            </div>
-                                                            <div className="coupon2">
-                                                                <button className="tp-btn-square-lg" name="update_cart"
-                                                                        type="submit">Update cart
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="row justify-content-end">
-                                                    <div className="col-md-5">
-                                                        <div className="cart-page-total">
-                                                            <h2>Cart total</h2>
-                                                            <ul className="mb-20">
-                                                                <li>Subtotal <span>$250.00</span></li>
-                                                                <li>Total <span>$250.00</span></li>
-                                                            </ul>
-                                                            <div className="checkout_btn f-right">
-                                                                <a className="tp-btn-square-lg" href="checkout.html"> checkout</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </form>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

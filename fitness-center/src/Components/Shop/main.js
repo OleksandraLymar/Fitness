@@ -70,4 +70,15 @@ function totalCost(product){
     }
 
 }
+function displayCart(){
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItems = JSON.parse(cartItems)
+
+    let productContainer=document.querySelector(".products-container")
+    console.log("run1 ")
+    if(cartItems && productContainer){
+        console.log("run2")
+    }
+}
 onLoadCartNumbers();
+displayCart();

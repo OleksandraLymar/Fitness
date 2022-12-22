@@ -1,5 +1,6 @@
 import "./css/style.css"
-
+import "../Shop/main.js"
+import {Link} from "react-router-dom";
 export default function Cart() {
 
     return (
@@ -33,67 +34,48 @@ export default function Cart() {
                                 <form action="#">
                                     <div className="table-content table-responsive">
                                         <table className="table">
-                                            <thead>
-                                            <tr>
-                                                <th className="product-thumbnail">Images</th>
-                                                <th className="cart-product-name">Product</th>
-                                                <th className="product-price">Unit Price</th>
-                                                <th className="product-quantity">Quantity</th>
-                                                <th className="product-subtotal">Total</th>
-                                                <th className="product-remove">Remove</th>
-                                            </tr>
+                                            <thead className={"products-container"}>
+                                                <tr>
+                                                    <th className="product-thumbnail">Images</th>
+                                                    <th className="cart-product-name">Product</th>
+                                                    <th className="product-price">Price</th>
+                                                    <th className="product-quantity">Quantity</th>
+                                                    <th className="product-subtotal">Total</th>
+                                                    <th className="product-remove">Remove</th>
+                                                </tr>
                                             </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td className="product-thumbnail"><a href="shop-details.html"><img
-                                                    src="assets/img/product/cart1.jpg" alt=""/></a></td>
-                                                <td className="product-name"><a href="shop-details.html">Water
-                                                    Bottle </a></td>
-                                                <td className="product-price"><span className="amount">$130.00</span>
-                                                </td>
-                                                <td className="product-quantity">
-                                                    <div className="cart-plus-minus cdcart-plus-minus"><input
-                                                        type="text" value="1"/>
-                                                        <div className="dec qtybutton">-</div>
-                                                        <div className="inc qtybutton">+</div></div>
-                                                </td>
-                                                <td className="product-subtotal"><span className="amount">$130.00</span>
-                                                </td>
-                                                <td className="product-remove "><a href="#"><i
-                                                    className="fa fa-times"></i></a></td>
-                                            </tr>
+                                            <tbody className={"products"}>
+                                                <tr>
+                                                    {/*<td className="product-thumbnail"><a href="shop-details.html"><img*/}
+                                                    {/*    src="assets/img/product/cart1.jpg" alt=""/></a></td>*/}
+                                                    {/*<td className="product-name"><a href="shop-details.html">Water*/}
+                                                    {/*    Bottle </a></td>*/}
+                                                    {/*<td className="product-price"><span className="amount">$130.00</span>*/}
+                                                    {/*</td>*/}
+                                                    {/*<td className="product-quantity">*/}
+                                                    {/*    <div className="cart-plus-minus cdcart-plus-minus"><input*/}
+                                                    {/*        type="text" value="1"/>*/}
+                                                    {/*        <div className="dec qtybutton">-</div>*/}
+                                                    {/*        <div className="inc qtybutton">+</div></div>*/}
+                                                    {/*</td>*/}
+                                                    {/*<td className="product-subtotal"><span className="amount">$130.00</span>*/}
+                                                    {/*</td>*/}
+                                                    {/*<td className="product-remove "><a href="#"><i*/}
+                                                    {/*    className="fa fa-times"></i></a></td>*/}
+                                                </tr>
                                             </tbody>
                                         </table>
                                     </div>
-                                    <div className="row">
-                                        <div className="col-12">
-                                            <div className="coupon-all">
-                                                <div className="coupon">
-                                                    <input id="coupon_code" className="input-text" name="coupon_code"
-                                                           value="" placeholder="Coupon code" type="text"/>
-                                                        <button className="tp-btn-square-lg" name="apply_coupon"
-                                                                type="submit">Apply
-                                                            coupon
-                                                        </button>
-                                                </div>
-                                                <div className="coupon2">
-                                                    <button className="tp-btn-square-lg" name="update_cart"
-                                                            type="submit">Update cart
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <div className="row justify-content-end">
                                         <div className="col-md-5">
                                             <div className="cart-page-total">
                                                 <h2>Cart total</h2>
                                                 <ul className="mb-20">
-                                                    <li>Subtotal <span>$250.00</span></li>
-                                                    <li>Total <span>$250.00</span></li>
+                                                    <li>Total <span></span></li>
                                                 </ul>
                                                 <div className="checkout_btn f-right">
-                                                    <a className="tp-btn-square-lg" href="checkout.html"> checkout</a>
+                                                    <Link className="tp-btn-square-lg" to="/checkout"> checkout</Link>
                                                 </div>
                                             </div>
                                         </div>
