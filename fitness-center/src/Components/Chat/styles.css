@@ -1,0 +1,53 @@
+
+.chat_button{
+    background-color: #ea1b29;
+    border: none;
+    border-radius: 0px;
+    font-family: "Teko", sans-serif;
+    font-size: 18px;
+    height: 60px;
+    width: 200px;
+}
+.chat_button:hover{
+    background-color: #ffffff;
+    border: none;
+    color: #ea1b29;
+    border:solid #ea1b29;
+}
+.card-body{
+    border: solid #ea1b29;
+    width: 700px;
+    margin: 0 auto;
+}
+.card{
+    border: none;
+
+}
+hr, strong{
+    color: #152136;
+}
+.text-end button{
+    background-color: #152136;
+    border: none;
+}
+.text-end button:hover{
+    background-color: #ea1b29;
+    border: none;
+}
+.input-group button{
+    background-color: #152136;
+    font-family: "Teko", sans-serif;
+    font-size: 22px;
+    border: none;
+
+}
+.input-group button:hover{
+    background-color: #ea1b29;
+    border: none;
+    border-radius: 0px;
+    font-family: "Teko", sans-serif;
+}
+.form-control:focus{
+    border:none;
+    outline: none;
+}

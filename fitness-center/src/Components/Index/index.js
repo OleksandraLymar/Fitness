@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import React, { useState } from "react";
 import "./styleindex.css";
+import ChatBox from "../Chat/ChatBox";
 
 export default function Index() {
     const [bmi, setBmi] = useState();

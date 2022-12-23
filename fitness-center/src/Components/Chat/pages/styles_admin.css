@@ -1,0 +1,24 @@
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.admin .list-group {
+    overflow: scroll;
+    height: 68vh;
+    margin-bottom: 1rem;
+}
+.row{
+    --bs-gutter-x: 0px;
+
+}
+.alert-info{
+    background-color: #ea1b29;
+    color: #ffffff;
+    font-family: "Teko", sans-serif;
+    font-size: 23px;
+}
+.block_chat{
+    margin: 10px 10px;
+}

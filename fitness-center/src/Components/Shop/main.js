@@ -66,19 +66,43 @@ function totalCost(product){
         cartCost = parseInt(cartCost)
         localStorage.setItem("totalCost", cartCost + product.price);
     }else{
-        localStorage.setItem('totalCost', product.price);
+        localStorage.setItem('totalCost', product.price)
     }
 
 }
+// function displayCart(){
+//     let cartItems = localStorage.getItem("productsInCart")
+//     cartItems = JSON.parse(cartItems)
+//
+//     let productContainer=document.querySelector(".products-container")
+//     console.log("run1 ")
+//     if(cartItems && productContainer){
+//         console.log("run2")
+//     }
+// }
+
+
 function displayCart(){
-    let cartItems = localStorage.getItem("productsInCart")
-    cartItems = JSON.parse(cartItems)
+    let cartItems = localStorage.getItem("productsInCart");
+    cartItems = JSON.parse(cartItems);
+    console.log(cartItems)
+    //I just get null at this part
+    let productContainer = document.querySelector(".products-container");
 
-    let productContainer=document.querySelector(".products-container")
-    console.log("run1 ")
     if(cartItems && productContainer){
-        console.log("run2")
-    }
-}
+        //to be empty when we reload
+        console.log("qwerty")
+        productContainer.innerHTML = ''
+        Object.values(cartItems).map(item => {
+            productContainer.innerHTML += `
+            <div class="products">
+            <ion-icon name="close-circle"></ion-icon>
+            <img src="${products.img}">
+            <span>${item.name}</span>
+            <span>${item.price}</span>
+            </div>`
+
+        })
+    }}
 onLoadCartNumbers();
 displayCart();

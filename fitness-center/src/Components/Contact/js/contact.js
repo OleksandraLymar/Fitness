@@ -3,6 +3,7 @@ import "../css/style.css"
 import emailjs from '@emailjs/browser';
 import {useRef} from "react";
 import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet'
+import ChatBox from "../../Chat/ChatBox";
 export default function Contact() {
 
     const form = useRef();
@@ -52,7 +53,6 @@ export default function Contact() {
 
                 <div className="tp-map-area pb-110">
                     <div className="tp-contact-map">
-
                         <div className={"map"}>
                             <div className="section-wrap mb-35 block1_text_map">
                                 <span className="tpsub-title mb-15">Our geolocation</span>
@@ -91,6 +91,18 @@ export default function Contact() {
                                 </Popup>
                             </Marker>
                         </MapContainer>
+                        </div>
+                    </div>
+                </div>
+                <div className="tp-map-area pb-110">
+                    <div className="tp-contact-map">
+                        <div className={"map"}>
+                            <div className="section-wrap mb-35 block1_text_map">
+                                <span className="tpsub-title mb-15">Your online assistant</span>
+                                <h3 className="section-title mb-20">We will advise you on any issue! Just write to us!</h3>
+                                <span className="section-border mb-30"><i className="far fa-circle"></i></span>
+                            </div>
+                            <ChatBox/>
                         </div>
                     </div>
                 </div>

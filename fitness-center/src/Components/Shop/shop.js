@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { products } from "./products.js";
 import React from "react"
 import "./main.js"
-import "./filter.js"
 export default function Shop() {
 
     const [query, setQuery] = useState("");
@@ -51,6 +50,7 @@ export default function Shop() {
                                     <div className="product_sidebar-widget mb-30">
                                         <h5 className="classes_widget_title mb-25"><i
                                             className="far fa-circle"/> Category</h5>
+                                        <nav>
                                         <ul className="product-catagory_list list">
                                             <li data-f={"all"}>
                                                 All
@@ -75,6 +75,7 @@ export default function Shop() {
                                             </li>
 
                                         </ul>
+                                        </nav>
                                     </div>
                                     <div className="product_sidebar-widget mb-30">
                                         <h5 className="classes_widget_title mb-25"><i
