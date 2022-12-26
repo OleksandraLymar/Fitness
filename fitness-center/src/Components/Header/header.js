@@ -4,12 +4,6 @@ export default function Header() {
 
     return (
         <section className="about-section text-center" id="about">
-            <div id="preloader">
-                <div className="preloader">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
             <div className="progress-wrap">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                     <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -78,11 +72,6 @@ export default function Header() {
                                                 <li><Link to="/contact">Contact </Link></li>
                                             </ul>
                                         </nav>
-                                    </div>
-                                    <div className="header-action-btn f-right d-none d-lg-block cart">
-                                        <Link to="/cart"> <i className="fas fa-shopping-basket"/>
-                                         <span>0</span>
-                                        </Link>
                                     </div>
                                 </div>
                             </div>

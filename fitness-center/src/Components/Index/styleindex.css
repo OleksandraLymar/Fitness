@@ -9,5 +9,7 @@
 }
 .bg_price{
     background-image: url("gym.jpg");
-    height: 207px
+    height: 207px;
+    background-repeat: no-repeat;
 }
+

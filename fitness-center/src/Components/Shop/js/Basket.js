@@ -36,10 +36,10 @@ export default function Basket(props) {
                 <div className="col-2">{item.name}</div>
                   <input className={"price"} value={item.name} name={"item_name"}/>
                 <div className="col-2">
-                  <button onClick={() => onRemove(item)} className="remove">
+                  <button type={"button"} onClick={() => onRemove(item)} className="remove">
                     -
                   </button>{' '}
-                  <button onClick={() => onAdd(item)} className="add">
+                  <button type={"button"} onClick={() => onAdd(item)} className="add">
                     +
                   </button>
                 </div>
