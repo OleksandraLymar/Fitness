@@ -1,8 +1,8 @@
 import "./css/style.css"
 import { useEffect, useState } from "react";
-import { products } from "./products.js";
+import { products } from "./data.js";
 import React from "react"
-import "./main.js"
+import "./js/Main.js"
 export default function Shop() {
 
     const [query, setQuery] = useState("");

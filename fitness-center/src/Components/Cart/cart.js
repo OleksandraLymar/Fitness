@@ -1,5 +1,5 @@
 import "./css/style.css"
-import "../Shop/main.js"
+import "../Shop/js/Main.js"
 import {Link} from "react-router-dom";
 export default function Cart() {
     return (

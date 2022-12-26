@@ -190,7 +190,7 @@ export default function AdminPage() {
                       onChange={(e) => setMessageBody(e.target.value)}
                       type="text"
                       placeholder="type message"
-                    ></FormControl>
+                    > </FormControl>
                     <Button type="submit" variant="primary">
                       Send
                     </Button>

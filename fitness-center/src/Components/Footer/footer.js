@@ -18,7 +18,6 @@ class Footer extends React.Component {
         }
         this.onChange= this.onChange.bind(this) // Разрешить методу доступ к классу
     }
-
     onChange(e){
         const oldState = this.state
         oldState[e.target.name] = e.target.value
@@ -26,7 +25,6 @@ class Footer extends React.Component {
         this.validateForm()
     }
     send(){
-        // console.log('send')
         let data = {
             phone: this.state.phone
         }
@@ -50,7 +48,6 @@ class Footer extends React.Component {
                 console.log(err)
             })
     }
-
     validateForm(){
         const oldState = this.state
         if(oldState.isPhoneValid ) {
