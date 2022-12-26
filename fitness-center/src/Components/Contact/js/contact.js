@@ -10,7 +10,7 @@ export default function Contact() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_067pdhs', 'template_kmn66vm', form.current, 'x9febaXk0Sao-CjTn')
+        emailjs.sendForm('service_024dsz5', 'template_kmn66vm', form.current, 'x9febaXk0Sao-CjTn')
             .then((result) => {
                 console.log(result.text);
                 document.getElementById("form").reset();

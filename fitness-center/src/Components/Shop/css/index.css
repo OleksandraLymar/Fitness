@@ -108,3 +108,6 @@ img.small {
   margin-bottom: 10px;
   font-family: "Roboto", sans-serif;
 }
+.price{
+  display:none;
+}
