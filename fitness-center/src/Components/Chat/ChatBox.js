@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
 import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
 import InputGroup from "react-bootstrap/InputGroup";
 import FormControl from "react-bootstrap/FormControl";
+import  'react-dom';
 import "./styles.css"
+import {Card} from "react-bootstrap";
 const ENDPOINT =
     window.location.host.indexOf("localhost") >= 0
         ? "http://127.0.0.1:4000"
@@ -111,7 +112,7 @@ export default function ChatBox() {
                                     onChange={(e) => setMessageBody(e.target.value)}
                                     type="text"
                                     placeholder="type message"
-                                ></FormControl>
+                                />
                                 <Button type="submit" variant="primary">
                                     Send
                                 </Button>

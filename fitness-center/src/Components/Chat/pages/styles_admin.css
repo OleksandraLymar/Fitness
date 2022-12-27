@@ -3,7 +3,9 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.admin div h2{
+    text-align: center;
+}
 .admin .list-group {
     overflow: scroll;
     height: 68vh;
@@ -21,4 +23,8 @@ code {
 }
 .block_chat{
     margin: 10px 10px;
+}
+.bg-main-admin{
+    background: url("../img/bg-1.png");
+
 }

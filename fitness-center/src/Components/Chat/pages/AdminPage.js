@@ -1,6 +1,6 @@
-
 import React, { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
+
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import ListGroup from "react-bootstrap/ListGroup";
@@ -10,11 +10,10 @@ import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import "./styles_admin.css"
-
 const ENDPOINT =
-  window.location.host.indexOf("localhost") >= 0
-    ? "http://127.0.0.1:4000"
-    : window.location.host;
+    window.location.host.indexOf("localhost") >= 0
+        ? "http://127.0.0.1:4000"
+        : window.location.host;
 
 export default function AdminPage() {
   const [selectedUser, setSelectedUser] = useState({});
@@ -39,9 +38,9 @@ export default function AdminPage() {
           const existUser = users.find((user) => user.name === data.from);
           if (existUser) {
             setUsers(
-              users.map((user) =>
-                user.name === existUser.name ? { ...user, unread: true } : user
-              )
+                users.map((user) =>
+                    user.name === existUser.name ? { ...user, unread: true } : user
+                )
             );
           }
         }
@@ -51,9 +50,9 @@ export default function AdminPage() {
         const existUser = users.find((user) => user.name === updatedUser.name);
         if (existUser) {
           setUsers(
-            users.map((user) =>
-              user.name === existUser.name ? updatedUser : user
-            )
+              users.map((user) =>
+                  user.name === existUser.name ? updatedUser : user
+              )
           );
         } else {
           setUsers([...users, updatedUser]);
@@ -80,9 +79,9 @@ export default function AdminPage() {
     const existUser = users.find((x) => x.name === user.name);
     if (existUser) {
       setUsers(
-        users.map((x) =>
-          x.name === existUser.name ? { ...x, unread: false } : x
-        )
+          users.map((x) =>
+              x.name === existUser.name ? { ...x, unread: false } : x
+          )
       );
     }
     socket.emit("onUserSelected", user);
@@ -109,100 +108,99 @@ export default function AdminPage() {
   };
 
   return (
-      <section className="about-section text-center" id="admin">
-        <div className="page__title align-items-center bg-main">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="page__title-content text-center">
-                  <h3 className="breadcrumb-title breadcrumb-title-sd mb-15">Admin</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <Row className={"block_chat"}>
-      <Col sm={3}>
-        {users.filter((x) => x.name !== "Admin").length === 0 && (
-          <Alert variant="info">No User Found</Alert>
-        )}
-        <ListGroup>
-          {users
-            .filter((x) => x.name !== "Admin")
-            .map((user) => (
-              <ListGroup.Item
-                action
-                key={user.name}
-                variant={user.name === selectedUser.name ? "info" : ""}
-                onClick={() => selectUser(user)}
-              >
-                <Badge
-                  bg={
-                    selectedUser.name === user.name
-                      ? user.online
-                        ? "primary"
-                        : "secondary"
-                      : user.unread
-                      ? "danger"
-                      : user.online
-                      ? "primary"
-                      : "secondary"
-                  }
-                >
-                  {selectedUser.name === user.name
-                    ? user.online
-                      ? "Online"
-                      : "Offline"
-                    : user.unread
-                    ? "New"
-                    : user.online
-                    ? "Online"
-                    : "Offline"}
-                </Badge>
-                &nbsp;
-                {user.name}
-              </ListGroup.Item>
-            ))}
-        </ListGroup>
-      </Col>
-      <Col sm={9}>
-        <div className="admin">
-          {!selectedUser.name ? (
-            <Alert variant="info">Select a user to start chat</Alert>
-          ) : (
-            <div>
-              <h2>Chat with {selectedUser.name}</h2>
-              <ListGroup ref={uiMessagesRef}>
-                {messages.length === 0 && (
-                  <ListGroup.Item>No message</ListGroup.Item>
-                )}
-                {messages.map((msg, index) => (
-                  <ListGroup.Item key={index}>
-                    <strong>{`${msg.from}: `}</strong> {msg.body}
-                  </ListGroup.Item>
-                ))}
-              </ListGroup>
-              <div>
-                <form onSubmit={submitHandler}>
-                  <InputGroup className="col-6">
-                    <FormControl
-                      value={messageBody}
-                      onChange={(e) => setMessageBody(e.target.value)}
-                      type="text"
-                      placeholder="type message"
-                    > </FormControl>
-                    <Button type="submit" variant="primary">
-                      Send
-                    </Button>
-                  </InputGroup>
-                </form>
-              </div>
-            </div>
+      <section>
+      <div className="page__title align-items-center bg-main-admin">
+                   <div className="container">
+                     <div className="row">
+                       <div className="col-xl-12">
+                         <div className="page__title-content text-center">
+                           <h3 className="breadcrumb-title breadcrumb-title-sd mb-15">Admin</h3>
+                         </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+      <Row className={"block_chat"}>
+        <Col sm={3}>
+          {users.filter((x) => x.name !== "Admin").length === 0 && (
+              <Alert variant="info">No User Found</Alert>
           )}
-        </div>
-      </Col>
-    </Row>
-
+          <ListGroup>
+            {users
+                .filter((x) => x.name !== "Admin")
+                .map((user) => (
+                    <ListGroup.Item
+                        action
+                        key={user.name}
+                        variant={user.name === selectedUser.name ? "info" : ""}
+                        onClick={() => selectUser(user)}
+                    >
+                      <Badge
+                          bg={
+                            selectedUser.name === user.name
+                                ? user.online
+                                    ? "primary"
+                                    : "secondary"
+                                : user.unread
+                                    ? "danger"
+                                    : user.online
+                                        ? "primary"
+                                        : "secondary"
+                          }
+                      >
+                        {selectedUser.name === user.name
+                            ? user.online
+                                ? "Online"
+                                : "Offline"
+                            : user.unread
+                                ? "New"
+                                : user.online
+                                    ? "Online"
+                                    : "Offline"}
+                      </Badge>
+                      &nbsp;
+                      {user.name}
+                    </ListGroup.Item>
+                ))}
+          </ListGroup>
+        </Col>
+        <Col sm={9}>
+          <div className="admin">
+            {!selectedUser.name ? (
+                <Alert variant="info">Select a user to start chat</Alert>
+            ) : (
+                <div>
+                  <h2>Chat with {selectedUser.name}</h2>
+                  <ListGroup ref={uiMessagesRef}>
+                    {messages.length === 0 && (
+                        <ListGroup.Item>No message</ListGroup.Item>
+                    )}
+                    {messages.map((msg, index) => (
+                        <ListGroup.Item key={index}>
+                          <strong>{`${msg.from}: `}</strong> {msg.body}
+                        </ListGroup.Item>
+                    ))}
+                  </ListGroup>
+                  <div>
+                    <form onSubmit={submitHandler}>
+                      <InputGroup className="col-6">
+                        <FormControl
+                            value={messageBody}
+                            onChange={(e) => setMessageBody(e.target.value)}
+                            type="text"
+                            placeholder="type message"
+                        ></FormControl>
+                        <Button type="submit" variant="primary">
+                          Send
+                        </Button>
+                      </InputGroup>
+                    </form>
+                  </div>
+                </div>
+            )}
+          </div>
+        </Col>
+      </Row>
       </section>
   );
 }

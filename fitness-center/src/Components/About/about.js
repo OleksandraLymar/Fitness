@@ -1,6 +1,13 @@
 import "./style/styles.css"
-import {Link} from "react-router-dom";
+
+import {Link, useLocation} from "react-router-dom";
+import {useEffect} from "react";
 export default function About() {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <section className="about-section text-center" id="/about">
             <body>
@@ -39,10 +46,10 @@ export default function About() {
                                         </div>
                                     </blockquote>
                                     <div className="about_play mb-25">
-                                            <Link className="video-play-button ab-play_btn hero-play popup-video"
-                                               to="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
+                                            <a className="video-play-button ab-play_btn hero-play popup-video"
+                                               href="https://www.youtube.com/watch?v=eaRQF-7hhmo">
                                                 <i className="fas fa-play"></i>
-                                            </Link>
+                                            </a>
                                             <span>Intro Video</span>
                                     </div>
                             </div>
@@ -69,7 +76,7 @@ export default function About() {
                                             <i className="flaticon-dumbbell"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Weight Lifting</a></h4>
+                                    <h4 className="services-item-title mb-20">Weight Lifting</h4>
                                     <p className="mb-25">Large selection of trainers and fixtures</p>
                                 </div>
                             </div>
@@ -81,7 +88,7 @@ export default function About() {
                                             <i className="flaticon-customer"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Power Yoga</a></h4>
+                                    <h4 className="services-item-title mb-20">Power Yoga</h4>
                                     <p className="mb-25">Develops the flexibility of your body</p>
                                 </div>
                             </div>
@@ -93,7 +100,7 @@ export default function About() {
                                             <i className="flaticon-lawn-mower"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Crosfit Tools</a></h4>
+                                    <h4 className="services-item-title mb-20">Crosfit Tools</h4>
                                     <p className="mb-25">We provide the best tools and training</p>
                                 </div>
                             </div>
@@ -105,7 +112,7 @@ export default function About() {
                                             <i className="flaticon-muscle"></i>
                                         </div>
                                     </div>
-                                    <h4 className="services-item-title mb-20"><a href="protfolio-details.html">Body Building</a></h4>
+                                    <h4 className="services-item-title mb-20">Body Building</h4>
                                     <p className="mb-25">We create your personal training and nutrition plan</p>
                                 </div>
                             </div>
@@ -237,8 +244,7 @@ export default function About() {
                                                          data-background="assets/img/blog/blog-bg.jpg">
                                                         <div className="blog-info">
                                                             <div className="blog__meta mb-15">
-                                                                <span><a href="#"><i className="far fa-bookmark"></i>Fitness Workout</a></span>
-                                                                <span><a href="#"><i className="far fa-comments"></i> 02 Comment</a></span>
+                                                                <span><i className="far fa-bookmark"></i>Fitness Workout</span>
                                                             </div>
                                                             <h5 className="blog_title mb-20"><a
                                                                 href="blog-details.html">Parturient accumsan cacus
@@ -261,7 +267,7 @@ export default function About() {
                                             <div className="row g-0">
                                                 <div className="col-lg-6">
                                                     <div className="blog-image">
-                                                        <a href="blog-details.html"><img
+                                                        <a href="#"><img
                                                             src="assets/img/blog/blog-3.jpg" className="img-fluid"
                                                             alt="blog-img"/></a>
                                                     </div>
@@ -271,8 +277,8 @@ export default function About() {
                                                          data-background="assets/img/blog/blog-bg.jpg">
                                                         <div className="blog-info">
                                                             <div className="blog__meta mb-15">
-                                                                <span><a href="#"><i className="far fa-bookmark"></i>Fitness Workout</a></span>
-                                                                <span><a href="#"><i className="far fa-comments"></i> 02 Comment</a></span>
+                                                                <span><i className="far fa-bookmark"></i>Fitness Workout</span>
+
                                                             </div>
                                                             <h5 className="blog_title mb-20">
                                                                 <a href="blog-details.html">Going to the gym for the

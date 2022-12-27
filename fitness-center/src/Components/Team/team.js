@@ -1,16 +1,15 @@
 import "./css/style.css"
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
 export default function Team() {
+    const { pathname } = useLocation();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
     return (
         <section className="about-section text-center" id="team">
             <body>
-
-            {/*<div id="preloader">*/}
-            {/*    <div className="preloader">*/}
-            {/*        <span></span>*/}
-            {/*        <span></span>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
             <div className="progress-wrap">
                 <svg className="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
                     <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
@@ -42,11 +41,10 @@ export default function Team() {
                                 <div className="trainer-single mb-60">
                                     <div className="trainer-image trainer-image-one"/>
                                     <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Taylor Antony</a></h5>
+                                        <h5 className="trainer-name">Taylor Antony</h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/fedorenko_vladyslav/"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -58,8 +56,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="team-details.html">Walker Adam</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/zhevlakov_dmitry/"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -71,8 +68,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="#">Harris Makr</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/vyhonskiy_v/"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                     <div className="trainer-btn">
@@ -88,8 +84,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="team-details.html">Davis Jack</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/trainer_vip/"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -99,11 +94,10 @@ export default function Team() {
                                     <div className="trainer-image trainer-image-5">
                                     </div>
                                     <div className="trainer-info">
-                                        <h5 className="trainer-name"><a href="team-details.html">Jenna Caroline</a></h5>
+                                        <h5 className="trainer-name">Jenna Caroline</h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/juli_fit_/?hl=en"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,8 +109,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="team-details.html">Lora Koskow</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/usmanovakate/"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -128,8 +121,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="team-details.html">Melanie Lifa</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/alvina_personal_trainer/?hl=en"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -141,8 +133,7 @@ export default function Team() {
                                         <h5 className="trainer-name"><a href="team-details.html">Hana Jacob</a></h5>
                                         <p className="mb-20">Fitness Trainer</p>
                                         <div className="trainer-soicial-icon">
-                                            <a href="#"><i className="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i className="fab fa-instagram"></i></a>
+                                            <a href="https://www.instagram.com/juli_fit_/?hl=en"><i className="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>

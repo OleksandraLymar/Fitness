@@ -5,7 +5,15 @@ import data from './data.js';
 import { useState } from 'react';
 import "./css/index.css"
 import React from "react";
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
 function ShopFitness() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     const { products } = data;
     const [cartItems, setCartItems] = useState([]);

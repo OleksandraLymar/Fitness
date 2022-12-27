@@ -1,6 +1,13 @@
 import "./style.css"
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
+import {useEffect} from "react";
 export default function Price() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     return (
         <section className="about-section text-center" id="price">
@@ -46,7 +53,7 @@ export default function Price() {
                                             <div className="priceing_image mb-10 bg_price"/>
                                             <div className="price_info pt-80"
                                                  data-background="assets/img/priceing/price-bg.png">
-                                                <div className="price text-center">
+                                                <div className="price text-center"style={{ display:"block" }}>
                                                     <div className="inner">
                                                         <h5>$35</h5>
                                                         <p>Monthly</p>
@@ -77,7 +84,7 @@ export default function Price() {
                                             </div>
                                             <div className="price_info pt-80"
                                                  data-background="assets/img/priceing/price-bg2.png">
-                                                <div className="price price-active text-center">
+                                                <div className="price price-active text-center"style={{ display:"block" }}>
                                                     <div className="inner">
                                                         <h5>$40</h5>
                                                         <p>Monthly</p>
@@ -104,7 +111,7 @@ export default function Price() {
                                             <div className="priceing_image mb-10 bg_price"/>
                                             <div className="price_info pt-80"
                                                  data-background="assets/img/priceing/price-bg.png">
-                                                <div className="price text-center">
+                                                <div className="price text-center"style={{ display:"block" }}>
                                                     <div className="inner">
                                                         <h5>$45</h5>
                                                         <p>Monthly</p>

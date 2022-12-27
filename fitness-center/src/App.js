@@ -8,12 +8,9 @@ import Price from "./Components/Price/price.js";
 import Header from "./Components/Header/header.js";
 import Footer from "./Components/Footer/footer.js";
 import BmiResult from "./Components/Index/bmiResult/bmiResult.js";
-import Cart from "./Components/Cart/cart.js";
-import Checkout from "./Components/Checkout/checkout.js";
-import Checkbox from "./Components/Chat/ChatBox.js"
 import AdminPage from "./Components/Chat/pages/AdminPage.js";
-import ShopFitness from "./Components/Shop/shopFitness.js"
-// import Error404 from "./Components/Error/error.js
+import ShopFitness from "./Components/Shop/shopFitness.js";
+ import Error404 from "./Components/Error/error.js";
 
 
 function App() {
@@ -28,10 +25,9 @@ function App() {
                    <Route path="/price" element={<Price/>} />
                    <Route path="/contact" element={<Contact/>} />
                    <Route path="/bmiResult" element={<BmiResult/>} />
-                   <Route path="/cart" element={<Cart/>} />
-                   <Route path="/checkout" element={<Checkout/>} />
                    <Route path="/admin" element={<AdminPage />}/>
                    <Route path="/shopFitness" element={<ShopFitness />}/>
+                  <Route path="*" exact element={<Error404 />} />
               </Routes>
             <Footer/>
     </BrowserRouter>

@@ -4,7 +4,15 @@ import emailjs from '@emailjs/browser';
 import {useRef} from "react";
 import {MapContainer, Marker, Popup, TileLayer, useMap} from 'react-leaflet'
 import ChatBox from "../../Chat/ChatBox";
+import {useLocation} from "react-router-dom";
+import {useEffect} from "react";
 export default function Contact() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
 
     const form = useRef();
     const sendEmail = (e) => {
@@ -144,7 +152,7 @@ export default function Contact() {
                                     </div>
                                     <div className="tp-contact-info-text">
                                         <h4 className="tp-contact-info-title">Email</h4>
-                                        <p><a href="corporate@fitnessfirst.de">corporate@fitnessfirst.de</a></p>
+                                        <p>corporate@fitnessfirst.de</p>
                                     </div>
                                 </div>
                             </div>

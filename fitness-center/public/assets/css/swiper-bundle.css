@@ -447,7 +447,6 @@ button.swiper-pagination-bullet {
   transition-timing-function: ease-out;
 }
 .swiper-container-fade .swiper-slide {
-  pointer-events: none;
   transition-property: opacity;
 }
 .swiper-container-fade .swiper-slide .swiper-slide {
