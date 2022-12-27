@@ -1,9 +1,17 @@
-import {Link} from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import React, { useState } from "react";
 import "./styleindex.css";
 import ChatBox from "../Chat/ChatBox";
+import {useEffect} from "react";
 
 export default function Index() {
+
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
     const [bmi, setBmi] = useState();
     const [info, setInfo] = useState();
     const [height, setHeight] = useState();
@@ -25,7 +33,7 @@ export default function Index() {
 
     };
     const resultbmi=()=>{
-        alert(handleBmi());
+        alert("Are you sure you want to know the truth?",handleBmi());
     }
 
     return (
@@ -49,8 +57,8 @@ export default function Index() {
                                         <h2 className="hero-title" data-animation="fadeInUp" data-delay=".4s">be powerful</h2>
                                         <p className="description mt-10 mb-50" data-animation="fadeInUp" data-delay=".6s">The hardest thing is to start</p>
                                         <div className="play-option" data-animation="fadeInUp" data-delay=".8s">
-                                            <a href="about.js" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/> </a>
-                                            <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=ZoZSp-wy8h8">
+                                            <Link to="/about" className="tp-btn">explore More <i className="fal fa-chevron-double-right"/> </Link>
+                                            <a className="video-play-button hero-play popup-video ml-30" href="https://www.youtube.com/watch?v=Z63w5PefxTQ">
                                                 <i className="fas fa-play"/>
                                             </a>
                                         </div>
@@ -555,7 +563,7 @@ export default function Index() {
                     </div>
                     <div className="col-xl-5 col-lg-7 col-md-12">
                         <div className=" mb-30">
-                            <form action={"/"} className="calculate-form-wrapper">
+                            <div className="calculate-form-wrapper">
                                 <h3 className="tp-calculate-form-title mb-30">BMI Calculator</h3>
                                 <div className="input-field mb-15">
                                     <input type="text" onChange={(e) => setHeight(e.target.value)}name={height} placeholder="Height"/>
@@ -571,7 +579,7 @@ export default function Index() {
                                 </div>
                                 <h1>{bmi}</h1>
                                 <h2>{info}</h2>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -623,9 +631,7 @@ export default function Index() {
                             <div className="col-lg-4 col-md-6">
                                 <div className="price_item mb-30 wow fadeInUp" data-wow-delay=".9s">
                                     <div className="priceing_image priceing_image-active mb-10 bg_price">
-                                            <div className="price__popular">
-                                                <span>popular</span>
-                                            </div>
+
                                     </div>
                                     <div className="price_info pt-80">
                                         <div className="price price-active text-center" style={{ display:"block" }}>
